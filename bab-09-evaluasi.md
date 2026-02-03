@@ -38,17 +38,18 @@ Single train-test split memiliki kelemahan:
 
 **K-Fold CV** membagi data menjadi k bagian (folds) dan melakukan training k kali, setiap kali menggunakan fold berbeda sebagai validation set.
 
-```mermaid
-block-beta
-    columns 6
-    labels("Fold 1"):1 K1["VAL"]:::val T1["Train"] T1 T1 T1 S1["Score 1"]
-    labels("Fold 2"):1 T2["Train"] K2["VAL"]:::val T2 T2 T2 S2["Score 2"]
-    labels("Fold 3"):1 T3["Train"] T3 K3["VAL"]:::val T3 T3 S3["Score 3"]
-    labels("Fold 4"):1 T4["Train"] T4 T4 K4["VAL"]:::val T4 S4["Score 4"]
-    labels("Fold 5"):1 T5["Train"] T5 T5 T5 K5["VAL"]:::val S5["Score 5"]
+```
+5-Fold Cross Validation:
 
-    space:6
-    Res["Final Score = Mean(Scores) ± Std(Scores)"]:6
+| Fold | Part 1 | Part 2 | Part 3 | Part 4 | Part 5 | Score |
+|------|--------|--------|--------|--------|--------|-------|
+|  1   |  VAL   | Train  | Train  | Train  | Train  | 0.85  |
+|  2   | Train  |  VAL   | Train  | Train  | Train  | 0.82  |
+|  3   | Train  | Train  |  VAL   | Train  | Train  | 0.88  |
+|  4   | Train  | Train  | Train  |  VAL   | Train  | 0.84  |
+|  5   | Train  | Train  | Train  | Train  |  VAL   | 0.86  |
+
+Final Score = Mean � Std = 0.85 � 0.02
 ```
 
 **Gambar 9.1**: Ilustrasi 5-Fold Cross Validation. Data dibagi menjadi 5 bagian. Model dilatih 5 kali, setiap kali menggunakan satu bagian berbeda sebagai validasi (orange).
@@ -122,23 +123,21 @@ Split 3: [Train      ][Val]
 
 **Grid Search** mencoba **semua kombinasi** hyperparameters dalam grid yang ditentukan.
 
-````
+```
 Grid untuk SVM:
     C: [0.1, 1, 10]
     gamma: [0.01, 0.1, 1]
 
 Total kombinasi: 3 × 3 = 9
+```
+Grid Search Results:
 
-```mermaid
-block-beta
-    columns 4
-    Space("gamma \\ C"):1 C1("0.1") C2("1") C3("10")
-    G1("0.01"):1 R1C1("0.82") R1C2("0.84") R1C3("0.85")
-    G2("0.1"):1 R2C1("0.85") R2C2("0.89"):::best R2C3("0.88")
-    G3("1"):1 R3C1("0.83") R3C2("0.86") R3C3("0.84")
-````
-
-**Gambar 9.2**: Hasil Grid Search. Seluruh kombinasi hyperparameter dicoba dalam bentuk grid. Warna hijau menunjukkan performa terbaik.
+|           | C=0.1 | C=1  | C=10 |
+|-----------|-------|------|------|
+| ?=0.01    | 0.82  | 0.84 | 0.85 |
+| ?=0.1     | 0.85  | 0.89 | 0.88 |
+| ?=1       | 0.83  | 0.86 | 0.84 |
+```
 
 ```
 
@@ -182,7 +181,7 @@ Random Search: 10 samples dari distribusi
 Samples: 1. C=0.5, gamma=0.03 → 0.83 2. C=2.1, gamma=0.15 → 0.88 3. C=0.8, gamma=0.07 → 0.86
 ...
 
-````
+```
 
 **Mengapa Random bisa lebih baik?**
 
@@ -197,10 +196,10 @@ graph TD
 
     subgraph Random_Search [Random Search]
         direction LR
-        R1(●) ~~~ R2(●) ~~~ R3(●)
-        R4(●) ~~~ R5(●) ~~~ R6(●)
+        R1(●) --- R2(●) --- R3(●)
+        R4(●) --- R5(●) --- R6(●)
     end
-````
+```
 
 **Gambar 9.3**: Perbedaan Grid Search vs Random Search. Grid Search membuang resources pada parameter yang tidak penting (sumbu vertikal misal), sedangkan Random Search mengeksplorasi nilai unique lebih banyak.
 
@@ -220,7 +219,7 @@ graph TD
 2. Gunakan acquisition function untuk pilih next point
 3. Ulangi
 
-````
+```
 ```mermaid
 xychart-beta
     title "Bayesian Optimization Concept"
@@ -228,11 +227,11 @@ xychart-beta
     y-axis "Score / Uncertainty" 0 --> 1
     line [0.5, 0.6, 0.4, 0.7, 0.5, 0.8, 0.6, 0.5, 0.4, 0.3, 0.5]
     bar [0.1, 0.1, 0.3, 0.1, 0.4, 0.05, 0.1, 0.5, 0.6, 0.7, 0.2]
-````
+```
 
 **Gambar 9.4**: Bayesian Optimization. Titik (line) adalah mean prediction, bar adalah uncertainty. Algoritma memilih next point berdasarkan Acquisition Function.
 
-````
+```
 
 **Acquisition Functions:**
 
@@ -279,12 +278,12 @@ graph TD
 
     subgraph Evaluation
         S1[CV Score: 0.85]
-        S2[CV Score: 0.88]:::best
+        S2[CV Score: 0.88]
         S3[CV Score: 0.82]
     end
 
     subgraph Selection
-        Sel[Select Model B]:::best
+        Sel[Select Model B]
         Test[Final Eval on TEST DATA]
     end
 
@@ -295,7 +294,7 @@ graph TD
 
     S1 & S2 & S3 --> Sel
     Sel --> Test
-````
+```
 
 **Gambar 9.5**: Pipeline Model Selection. Beberapa kandidat model dilatih dan divalidasi. Model terbaik dipilih berdasarkan CV Score untuk dievaluasi final di Test Data.
 
@@ -406,7 +405,7 @@ Fₘ(x) = Fₘ₋₁(x) + γₘ × hₘ(x)  // Final prediction
 
 **Stacking** menggunakan model ("meta-learner") untuk menggabungkan prediksi dari models lain.
 
-````
+```
 ```mermaid
 graph TD
     subgraph Level_0 [Level 0: Base Models]
@@ -434,11 +433,11 @@ graph TD
 
     P1 & P2 & P3 --> Meta
     Meta --> Final
-````
+```
 
 **Gambar 9.8**: Stacking. Prediksi dari model-model dasar (Level 0) menjadi fitur input untuk model meta-learner (Level 1).
 
-````
+```
 
 **Training Stacking:**
 
@@ -471,7 +470,7 @@ xychart-beta
     y-axis "Score" 0.5 --> 1.0
     line [0.99, 0.99, 0.98, 0.98, 0.97]
     line [0.60, 0.65, 0.70, 0.75, 0.78]
-````
+```
 
 **Gambar 9.9**: Learning Curves dengan High Variance (Overfitting). Ada gap besar antara Training score (tinggi) dan CV score (rendah). Solusi: tambah data.
 
