@@ -186,8 +186,6 @@ graph TD
     style HighInt fill:#9f9,color:#000
 ```
 
-`````
-
 **Gambar 10.5**: Trade-off Accuracy vs Interpretability. Umumnya, semakin tinggi akurasi model (seperti Deep Learning di kiri atas), semakin rendah interpretability-nya. Model yang sangat interpretable (Linear Regression di kanan bawah) cenderung memiliki akurasi lebih rendah data kompleks.
 _(Catatan: x-axis terbalik untuk ilustrasi sesuai konsep 'Trade-off')_
 
@@ -283,12 +281,13 @@ graph TD
 
 ### 10.6.1 Dampak Otomasi
 
-| Kelompok | Status | Contoh Pekerjaan |
-| :--- | :--- | :--- |
-| **RISK TINGGI** | Terancam Automasi | Data Entry, Drivers, Cashiers, Repetitive Tasks |
-| **BERUBAH** | Augmented by AI | Doctors, Lawyers, Programmers, Designers |
-| **JOB BARU** | Muncul karena AI | AI Ethicist, Prompt Engineer, AI Trainer, Data Scientist |
-```
+| Kelompok        | Status            | Contoh Pekerjaan                                         |
+| :-------------- | :---------------- | :------------------------------------------------------- |
+| **RISK TINGGI** | Terancam Automasi | Data Entry, Drivers, Cashiers, Repetitive Tasks          |
+| **BERUBAH**     | Augmented by AI   | Doctors, Lawyers, Programmers, Designers                 |
+| **JOB BARU**    | Muncul karena AI  | AI Ethicist, Prompt Engineer, AI Trainer, Data Scientist |
+
+`````
 
 **Gambar 10.7**: Dampak AI terhadap Pekerjaan. Pekerjaan rutin berisiko digantikan, pekerjaan profesional akan teraugmentasi, dan pekerjaan baru akan muncul.
 
