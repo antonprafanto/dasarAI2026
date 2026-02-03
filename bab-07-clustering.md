@@ -48,9 +48,6 @@ graph TD
     D2:::input
     P1:::output
     G1:::output
-
-    classDef input fill:#f5f5f5,stroke:#333,stroke-dasharray: 5 5;
-    classDef output fill:#c8e6c9,stroke:#2e7d32,stroke-width:2px;
 ```
 
 **Gambar 7.1**: Perbedaan mendasar: Klasifikasi belajar dari data berlabel (guru), Clustering mencari pola sendiri dari data tanpa label (otodidak).
@@ -342,10 +339,6 @@ graph TD
     subgraph Noise [Noise/Outlier]
         X((Noise)):::noise
     end
-
-    classDef core fill:#ffccbc,stroke:#d84315,stroke-width:3px;
-    classDef border fill:#bbdefb,stroke:#1565c0;
-    classDef noise fill:#f5f5f5,stroke:#9e9e9e,stroke-dasharray: 5 5;
 ```
 
 _(Core: Punya banyak tetangga. Border: Punya sedikit tetangga tapi dekat Core. Noise: Sendirian)._
@@ -407,8 +400,6 @@ graph TD
         N1[X]:::noise
         N2[X]:::noise
     end
-
-    classDef noise fill:#ffcdd2,stroke:#c62828;
 ```
 
 **Gambar 7.6**: Hasil clustering DBSCAN. Data padat membentuk cluster, data terpencil ditandai sebagai noise (X).

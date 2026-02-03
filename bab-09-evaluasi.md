@@ -49,8 +49,6 @@ block-beta
 
     space:6
     Res["Final Score = Mean(Scores) ± Std(Scores)"]:6
-
-    classDef val fill:#ffcc80,stroke:#e65100
 ```
 
 **Gambar 9.1**: Ilustrasi 5-Fold Cross Validation. Data dibagi menjadi 5 bagian. Model dilatih 5 kali, setiap kali menggunakan satu bagian berbeda sebagai validasi (orange).
@@ -138,8 +136,6 @@ block-beta
     G1("0.01"):1 R1C1("0.82") R1C2("0.84") R1C3("0.85")
     G2("0.1"):1 R2C1("0.85") R2C2("0.89"):::best R2C3("0.88")
     G3("1"):1 R3C1("0.83") R3C2("0.86") R3C3("0.84")
-
-    classDef best fill:#a5d6a7,stroke:#2e7d32,stroke-width:2px
 ````
 
 **Gambar 9.2**: Hasil Grid Search. Seluruh kombinasi hyperparameter dicoba dalam bentuk grid. Warna hijau menunjukkan performa terbaik.
@@ -299,8 +295,6 @@ graph TD
 
     S1 & S2 & S3 --> Sel
     Sel --> Test
-
-    classDef best fill:#c8e6c9,stroke:#2e7d32
 ````
 
 **Gambar 9.5**: Pipeline Model Selection. Beberapa kandidat model dilatih dan divalidasi. Model terbaik dipilih berdasarkan CV Score untuk dievaluasi final di Test Data.

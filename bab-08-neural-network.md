@@ -149,10 +149,6 @@ graph TD
         X4[1,1 -> 0]:::zero
         Gap2[NOT Linearly Separable]:::hidden
     end
-
-    classDef zero fill:#ffcdd2,stroke:#c62828
-    classDef one fill:#c8e6c9,stroke:#2e7d32
-    classDef hidden opacity:0
 ```
 
 **Gambar 8.3**: Perbedaan AND (Separable) vs XOR (Not Separable). Garis lurus tidak bisa memisahkan output 0 dan 1 pada kasus XOR.
@@ -534,8 +530,6 @@ graph TD
 
         I1 --- H2
         I2 --- H1
-
-        classDef drop fill:#f5f5f5,stroke:#bdbdbd,stroke-dasharray: 5 5;
     end
 
     subgraph Testing [Testing (No Dropout)]

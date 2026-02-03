@@ -44,7 +44,6 @@ graph TD
         D5[5. Deployment Bias<br>Context mismatch]
     end
     D1 & D2 & D3 & D4 & D5 :::bias
-    classDef bias fill:#ffcdd2,stroke:#e57373
 ```
 
 **Gambar 10.1**: Sumber-sumber Bias AI. Bias bisa masuk di setiap tahap pipeline machine learning.
@@ -246,11 +245,6 @@ block-beta
     Limited["LIMITED RISK (Transparency)<br>Chatbots, Deepfakes"]
     Minimal["MINIMAL RISK (Free)<br>Spam filters, Games"]
 
-    classDef red fill:#ffcdd2,stroke:#c62828
-    classDef orange fill:#ffcc80,stroke:#ef6c00
-    classDef yellow fill:#fff9c4,stroke:#fbc02d
-    classDef green fill:#c8e6c9,stroke:#2e7d32
-
     class Unacceptable red
     class High orange
     class Limited yellow
@@ -308,10 +302,6 @@ block-beta
         N3("AI Trainer")
         N4("Data Scientist")
     end
-
-    classDef r fill:#ffcdd2
-    classDef c fill:#fff9c4
-    classDef n fill:#c8e6c9
 
     class Risky,R1,R2,R3,R4 r
     class Changing,C1,C2,C3,C4 c

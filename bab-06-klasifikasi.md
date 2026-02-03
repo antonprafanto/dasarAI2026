@@ -198,26 +198,28 @@ FUNGSI KNN_Predict(x_baru, k, data_training):
 ### 6.3.3 Visualisasi
 
 ```mermaid
-graph TD
-    subgraph Space [Feature Space]
-        C1(( )):::classA
-        C2(( )):::classA
-        C3(( )):::classA
-
-        S1[ ]:::classB
-        S2[ ]:::classB
-        S3[ ]:::classB
-
-        New((?)):::newPoint
-
-        New ---|Dist 1| C3
-        New ---|Dist 2| S1
-        New ---|Dist 3| S2
+flowchart TD
+    subgraph Space["Feature Space dengan K=3"]
+        A1["Kelas A"]
+        A2["Kelas A"]
+        A3["Kelas A"]
+        
+        B1["Kelas B"]
+        B2["Kelas B"]
+        B3["Kelas B"]
+        
+        Q["? Data Baru"]
+        
+        Q ---|"Jarak 1"| A3
+        Q ---|"Jarak 2"| B1
+        Q ---|"Jarak 3"| B2
     end
-
-    classDef classA fill:#ffccbc,stroke:#d84315
-    classDef classB fill:#bbdefb,stroke:#1565c0
-    classDef newPoint fill:#fff9c4,stroke:#fbc02d,stroke-width:2px
+    
+    Vote["Voting: 2 Kelas B, 1 Kelas A"]
+    Result["Prediksi: Kelas B"]
+    
+    Space --> Vote --> Result
+```
 ```
 
 _(Titik baru (?) dikelilingi oleh tetangga terdekat. Jika K=3, kita hitung 3 tetangga terdekat dan lakukan voting mayoritas)._
@@ -358,9 +360,6 @@ graph TD
 
     Wind -->|Kencang| No2[TIDAK]:::negative
     Wind -->|Pelan| Yes3[MAIN]:::positive
-
-    classDef positive fill:#c8e6c9,stroke:#2e7d32
-    classDef negative fill:#ffccbc,stroke:#c62828
 ```
 
 **Gambar 6.6**: Struktur Decision Tree. Node akar dan internal berupa pertanyaan, node daun berupa keputusan (Main/Tidak).
@@ -521,8 +520,6 @@ graph TD
     Hyperplane[Hyperplane] --- Margin
 
     end
-
-    classDef sv stroke:#ff0000,stroke-width:4px,fill:#fff;
 ```
 
 _(Support Vectors (garis merah tebal) adalah titik data terdekat yang menopang/menentukan posisi hyperplane)._
