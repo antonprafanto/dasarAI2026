@@ -831,29 +831,21 @@ Child 2: 100|00 = 16 → f = 256
 
 ### 4.6.2 Kapan Menggunakan Algoritma Mana?
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│              PEMILIHAN ALGORITMA                            │
-├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│  Butuh path ke solusi?                                      │
-│       │                                                     │
-│       ├── YA ────► Punya heuristic yang baik?              │
-│       │                 │                                   │
-│       │                 ├── YA ────► A*                    │
-│       │                 │                                   │
-│       │                 └── TIDAK ───► Uniform Cost sama?   │
-│       │                                    │                │
-│       │                                    ├── YA → BFS/IDDFS│
-│       │                                    └── TIDAK → UCS  │
-│       │                                                     │
-│       └── TIDAK ──► Memory terbatas?                       │
-│                          │                                  │
-│                          ├── YA ────► SA / GA              │
-│                          │                                  │
-│                          └── TIDAK ──► Hill Climbing       │
-│                                                             │
-└─────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TD
+    Start["Butuh path ke solusi?"]
+    
+    Start -->|YA| Heur["Punya heuristic yang baik?"]
+    Start -->|TIDAK| Mem["Memory terbatas?"]
+    
+    Heur -->|YA| AStar["A*"]
+    Heur -->|TIDAK| Cost["Uniform cost sama?"]
+    
+    Cost -->|YA| BFS["BFS / IDDFS"]
+    Cost -->|TIDAK| UCS["UCS"]
+    
+    Mem -->|YA| SAGA["SA / GA"]
+    Mem -->|TIDAK| HC["Hill Climbing"]
 ```
 
 ---
