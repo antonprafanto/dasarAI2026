@@ -391,26 +391,33 @@ graph LR
 ### 10.8.1 Principles of Responsible AI
 
 ```mermaid
-mindmap
-  root((Responsible AI))
-    Fairness
-      Test for bias
-      Mitigate discrimination
-    Reliability & Safety
-      Testing
-      Failsafe
-    Privacy & Security
-      Protect data
-      Secure deployment
-    Inclusiveness
-      Accessible
-      Diverse users
-    Transparency
-      Explainable
-      Disclosure
-    Accountability
-      Ownership
-      Oversight
+flowchart TD
+    Root["Responsible AI"]
+    
+    Root --> F["Fairness"]
+    Root --> RS["Reliability & Safety"]
+    Root --> PS["Privacy & Security"]
+    Root --> IN["Inclusiveness"]
+    Root --> TR["Transparency"]
+    Root --> AC["Accountability"]
+    
+    F --> F1[Test for bias]
+    F --> F2[Mitigate discrimination]
+    
+    RS --> RS1[Testing]
+    RS --> RS2[Failsafe]
+    
+    PS --> PS1[Protect data]
+    PS --> PS2[Secure deployment]
+    
+    IN --> IN1[Accessible]
+    IN --> IN2[Diverse users]
+    
+    TR --> TR1[Explainable]
+    TR --> TR2[Disclosure]
+    
+    AC --> AC1[Ownership]
+    AC --> AC2[Oversight]
 ```
 
 **Gambar 10.10**: Prinsip AI yang Bertanggung Jawab. Enam pilar utama yang harus diperhatikan dalam pengembangan AI yang etis.

@@ -74,18 +74,22 @@ ML TIDAK cocok ketika:
 ## 5.2 Tipe-tipe Machine Learning
 
 ```mermaid
-mindmap
-  root((MACHINE<br/>LEARNING))
-    SUPERVISED<br/>(Data Berlabel)
-        Klasifikasi
-        Regresi
-    UNSUPERVISED<br/>(Data Tanpa Label)
-        Clustering
-        Dimensionality Reduction
-        Anomaly Detection
-    REINFORCEMENT<br/>(Reward Base)
-        Game AI
-        Robot Navigation
+flowchart TD
+    Root["MACHINE LEARNING"]
+    
+    Root --> SUP["SUPERVISED - Data Berlabel"]
+    Root --> UNS["UNSUPERVISED - Data Tanpa Label"]
+    Root --> RL["REINFORCEMENT - Reward Based"]
+    
+    SUP --> CLS[Klasifikasi]
+    SUP --> REG[Regresi]
+    
+    UNS --> CLU[Clustering]
+    UNS --> DIM[Dimensionality Reduction]
+    UNS --> ANO[Anomaly Detection]
+    
+    RL --> GAM[Game AI]
+    RL --> ROB[Robot Navigation]
 ```
 
 **Gambar 5.2**: Tiga pilar utama Machine Learning: Supervised, Unsupervised, dan Reinforcement Learning.

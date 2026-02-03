@@ -87,21 +87,25 @@ graph TD
 ### 4.1.3 Kategorisasi Algoritma Pencarian
 
 ```mermaid
-mindmap
-  root((ALGORITMA<br/>PENCARIAN))
-    UNINFORMED SEARCH<br/>Blind Search
-        BFS
-        DFS
-        Uniform Cost
-        Iterative Deepening
-    INFORMED SEARCH<br/>Heuristic Search
-        Greedy Best-First
-        A Star
-        IDA Star
-    LOCAL SEARCH<br/>Optimization
-        Hill Climbing
-        Simulated Annealing
-        Genetic Algorithm
+flowchart TD
+    Root["ALGORITMA PENCARIAN"]
+    
+    Root --> UI["UNINFORMED SEARCH"]
+    Root --> IS["INFORMED SEARCH"]
+    Root --> LS["LOCAL SEARCH"]
+    
+    UI --> BFS[BFS]
+    UI --> DFS[DFS]
+    UI --> UCS[Uniform Cost]
+    UI --> IDS[Iterative Deepening]
+    
+    IS --> GBF[Greedy Best-First]
+    IS --> AStar[A Star]
+    IS --> IDA[IDA Star]
+    
+    LS --> HC[Hill Climbing]
+    LS --> SA[Simulated Annealing]
+    LS --> GA[Genetic Algorithm]
 ```
 
 **Gambar 4.2**: Klasifikasi Algoritma Pencarian dalam AI.
