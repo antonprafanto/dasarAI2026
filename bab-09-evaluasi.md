@@ -49,7 +49,7 @@ Single train-test split memiliki kelemahan:
 |  4   | Train  | Train  | Train  |  VAL   | Train  | 0.84  |
 |  5   | Train  | Train  | Train  | Train  |  VAL   | 0.86  |
 
-Final Score = Mean � Std = 0.85 � 0.02
+Final Score = Mean ± Std = 0.85 ± 0.02
 ```
 
 **Gambar 9.1**: Ilustrasi 5-Fold Cross Validation. Data dibagi menjadi 5 bagian. Model dilatih 5 kali, setiap kali menggunakan satu bagian berbeda sebagai validasi (orange).
@@ -129,17 +129,20 @@ Grid untuk SVM:
     gamma: [0.01, 0.1, 1]
 
 Total kombinasi: 3 × 3 = 9
+
 ```
-Grid Search Results:
+Grid Search Results (3×3 = 9 combinations):
 
 |           | C=0.1 | C=1  | C=10 |
 |-----------|-------|------|------|
-| ?=0.01    | 0.82  | 0.84 | 0.85 |
-| ?=0.1     | 0.85  | 0.89 | 0.88 |
-| ?=1       | 0.83  | 0.86 | 0.84 |
+| γ=0.01    | 0.82  | 0.84 | 0.85 |
+| γ=0.1     | 0.85  | 0.89*| 0.88 |
+| γ=1       | 0.83  | 0.86 | 0.84 |
+
+*Best score: C=1, gamma=0.1 → 0.89
 ```
 
-```
+**Gambar 9.2**: Hasil Grid Search. Seluruh kombinasi hyperparameter dicoba dalam bentuk grid. * menunjukkan performa terbaik.
 
 **Pseudocode:**
 
@@ -189,15 +192,15 @@ Samples: 1. C=0.5, gamma=0.03 → 0.83 2. C=2.1, gamma=0.15 → 0.88 3. C=0.8, g
 graph TD
     subgraph Grid_Search [Grid Search]
         direction LR
-        G1(●) --- G2(●) --- G3(●) --- G4(●) --- G5(●)
-        G6(●) --- G7(●) --- G8(●) --- G9(●) --- G10(●)
-        G11(●) --- G12(●) --- G13(●) --- G14(●) --- G15(●)
+        G1(*) --- G2(*) --- G3(*) --- G4(*) --- G5(*)
+        G6(*) --- G7(*) --- G8(*) --- G9(*) --- G10(*)
+        G11(*) --- G12(*) --- G13(*) --- G14(*) --- G15(*)
     end
 
     subgraph Random_Search [Random Search]
         direction LR
-        R1(●) --- R2(●) --- R3(●)
-        R4(●) --- R5(●) --- R6(●)
+        R1(*) --- R2(*) --- R3(*)
+        R4(*) --- R5(*) --- R6(*)
     end
 ```
 
