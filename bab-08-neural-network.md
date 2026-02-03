@@ -382,12 +382,12 @@ $$\frac{dy}{dx} = \frac{dy}{dg} \times \frac{dg}{dx}$$
 
 ```mermaid
 graph LR
-    subgraph Forward_Pass ["Forward Pass - Hitung Output"]
+    subgraph Forward_Pass ["FORWARD PASS"]
         direction LR
         x[Input x] --> z1[z₁] --> a1[a₁] --> z2[z₂] --> a2[Output a₂] --> L[Loss Function]
     end
 
-    subgraph Backward_Pass ["Backward Pass - Hitung Gradient"]
+    subgraph Backward_Pass ["BACKWARD PASS"]
         direction RL
         L -.-> da2[∂L/∂a₂]
         da2 -.-> dz2[∂L/∂z₂]
@@ -436,11 +436,11 @@ $$W \leftarrow W - \eta v_t$$
 
 ```mermaid
 graph TD
-    subgraph SGD ["Tanpa Momentum - Zig-zag"]
+    subgraph SGD ["Tanpa Momentum"]
         S1((Start)) --> Z1 --> Z2 --> Z3 --> Z4 --> Z5 --> G1((Minima))
     end
 
-    subgraph SGD_M ["Dengan Momentum - Smooth"]
+    subgraph SGD_M ["Dengan Momentum"]
         S2((Start)) --> M1 --> M2 --> G2((Minima))
     end
 ```
@@ -523,7 +523,7 @@ Teknik untuk mencegah overfitting:
 
 ```mermaid
 graph TD
-    subgraph Training ["Training - Dropout Applied"]
+    subgraph Training ["TRAINING"]
         I1((In1)) --- H1((H1)) --- O1((Out))
         I2((In2)) --- H2((X))
         I3((In3)) --- H3((H3)) --- O1
@@ -532,7 +532,7 @@ graph TD
         I2 --- H1
     end
 
-    subgraph Testing ["Testing - No Dropout"]
+    subgraph Testing ["TESTING"]
         TI1((In1)) --- TH1((H1)) --- TO1((Out))
         TI2((In2)) --- TH2((H2)) --- TO1
         TI3((In3)) --- TH3((H3)) --- TO1
