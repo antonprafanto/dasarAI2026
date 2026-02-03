@@ -534,11 +534,11 @@ graph TD
         U2[Val Score: Low]
     end
 
-    subgraph Optimal [Optimal Complexity]
+    subgraph Optimal [Optimal]
         O1[Train Score: High]
-        O2[Val Score: High (Peak)]
-        style Optimal fill:#bfb,stroke:#333
+        O2["Val Score: High (Peak)"]
     end
+    style Optimal fill:#bfb,stroke:#333
 
     subgraph Overfitting [Overfit]
         V1[Train Score: Very High]
