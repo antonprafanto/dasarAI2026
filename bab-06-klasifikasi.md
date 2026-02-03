@@ -203,23 +203,22 @@ flowchart TD
         A1["Kelas A"]
         A2["Kelas A"]
         A3["Kelas A"]
-        
+
         B1["Kelas B"]
         B2["Kelas B"]
         B3["Kelas B"]
-        
+
         Q["? Data Baru"]
-        
+
         Q ---|"Jarak 1"| A3
         Q ---|"Jarak 2"| B1
         Q ---|"Jarak 3"| B2
     end
-    
+
     Vote["Voting: 2 Kelas B, 1 Kelas A"]
     Result["Prediksi: Kelas B"]
-    
+
     Space --> Vote --> Result
-```
 ```
 
 _(Titik baru (?) dikelilingi oleh tetangga terdekat. Jika K=3, kita hitung 3 tetangga terdekat dan lakukan voting mayoritas)._
@@ -228,12 +227,12 @@ _(Titik baru (?) dikelilingi oleh tetangga terdekat. Jika K=3, kita hitung 3 tet
 
 ### 6.3.4 Fungsi Jarak
 
-| Nama          | Formula                             | Kasus Penggunaan       |
-| ------------- | ----------------------------------- | ---------------------- | ---------- | ----------------- |
-| **Euclidean** | $\sqrt{\sum(x_i - y_i)^2}$          | Default, fitur kontinu |
-| **Manhattan** | $\sum                               | x_i - y_i              | $          | Grid, sparse data |
-| **Minkowski** | $(\sum                              | x_i - y_i              | ^p)^{1/p}$ | Generalisasi      |
-| **Cosine**    | $1 - \frac{x \cdot y}{\|x\| \|y\|}$ | Text similarity        |
+| Nama          | Formula                | Kasus Penggunaan       |
+| ------------- | ---------------------- | ---------------------- |
+| **Euclidean** | √Σ(xᵢ - yᵢ)²           | Default, fitur kontinu |
+| **Manhattan** | Σ\|xᵢ - yᵢ\|           | Grid, sparse data      |
+| **Minkowski** | (Σ\|xᵢ - yᵢ\|^p)^(1/p) | Generalisasi           |
+| **Cosine**    | 1 - (x·y)/(‖x‖·‖y‖)    | Text similarity        |
 
 ### 6.3.5 Memilih K
 
