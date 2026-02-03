@@ -345,33 +345,17 @@ graph TD
     Root[Initial] --> S1
     Root --> S2
     Root --> S3
-
     S1 --> S4
     S1 --> S5
     S2 --> S6
     S3 --> S7
     S3 --> Goal[Goal]
-
-    classDef plain fill:#fff,stroke:#333,stroke-width:1px;
-    classDef goal fill:#d4edda,stroke:#28a745,stroke-width:2px;
-
-    class Root,S1,S2,S3,S4,S5,S6,S7 plain;
-    class Goal goal;
-
-    subgraph Level1 [Level 1]
-    S1
-    S2
-    S3
-    end
-
-    subgraph Level2 [Level 2]
-    S4
-    S5
-    S6
-    S7
-    Goal
-    end
 ```
+
+**Keterangan:**
+- **Level 0**: Initial (Root)
+- **Level 1**: S1, S2, S3
+- **Level 2**: S4, S5, S6, S7, Goal
 
 **Gambar 2.6**: Ilustrasi Search Tree sederhana. Root adalah kondisi awal, dan Goal adalah solusi yang dicari.
 
