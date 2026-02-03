@@ -61,7 +61,7 @@ graph LR
         H1[Train] --- H2[Train] --- H3[Train] --- H4[Train] --- H5[VAL]:::val
     end
 
-    classDef val fill:#f96,stroke:#333,stroke-width:2px;
+    classDef val fill:#f96,stroke:#333,stroke-width:2px,color:#000;
 ```
 
 **Score Rata-rata**: 0.85 ± 0.02
@@ -165,7 +165,7 @@ graph TD
             C3_1[C=0.1: 0.83] --- C3_2[C=1: 0.86] --- C3_3[C=10: 0.84]
         end
     end
-    classDef best fill:#0f0,stroke:#333,stroke-width:2px;
+    classDef best fill:#0f0,stroke:#333,stroke-width:2px,color:#000;
 ```
 
 **Gambar 9.2**: Hasil Grid Search. Seluruh kombinasi hyperparameter dicoba dalam bentuk grid. \* menunjukkan performa terbaik.
@@ -257,7 +257,7 @@ graph TD
         C -->|Select Max Potential Point| D[Evaluate True Objective]
         D -->|New Data Point| B
 
-        style C fill:#f9f,stroke:#333
+        style C fill:#f9f,stroke:#333,color:#000
     end
 
 ```
@@ -538,7 +538,7 @@ graph TD
         O1[Train Score: High]
         O2["Val Score: High (Peak)"]
     end
-    style Optimal fill:#bfb,stroke:#333
+    style Optimal fill:#bfb,stroke:#333,color:#000
 
     subgraph Overfitting [Overfit]
         V1[Train Score: Very High]
@@ -561,8 +561,8 @@ graph TD
     Check -->|Yes| Good[Good Model: Errors make sense]
     Check -->|No / Pattern Exists| Bad[Bad Model: Missing nonlinear pattern]
 
-    style Good fill:#bfb
-    style Bad fill:#fbb
+    style Good fill:#bfb,color:#000
+    style Bad fill:#fbb,color:#000
 ```
 
 **Gambar 9.11**: Analisis Residual. Residual yang bagus tersebar acak di sekitar nol (randomness). Jika ada pola, berarti model melewatkan informasi tertentu.

@@ -44,7 +44,7 @@ graph TD
         D5[5. Deployment Bias<br>Context mismatch]
     end
     class D1,D2,D3,D4,D5 bias
-    classDef bias fill:#fcc,stroke:#f00,stroke-width:2px;
+    classDef bias fill:#fcc,stroke:#f00,stroke-width:2px,color:#000;
 ```
 
 **Gambar 10.1**: Sumber-sumber Bias AI. Bias bisa masuk di setiap tahap pipeline machine learning.
@@ -174,7 +174,6 @@ graph LR
 
 ### 10.3.5 Trade-off: Accuracy vs Interpretability
 
-````mermaid
 ```mermaid
 graph TD
     HighAcc[Deep Learning: High Accuracy, Low Interpretability]
@@ -183,11 +182,11 @@ graph TD
 
     HighAcc --- Med --- HighInt
 
-    style HighAcc fill:#f99
-    style HighInt fill:#9f9
-````
+    style HighAcc fill:#f99,color:#000
+    style HighInt fill:#9f9,color:#000
+```
 
-````
+`````
 
 **Gambar 10.5**: Trade-off Accuracy vs Interpretability. Umumnya, semakin tinggi akurasi model (seperti Deep Learning di kiri atas), semakin rendah interpretability-nya. Model yang sangat interpretable (Linear Regression di kanan bawah) cenderung memiliki akurasi lebih rendah data kompleks.
 _(Catatan: x-axis terbalik untuk ilustrasi sesuai konsep 'Trade-off')_
@@ -254,11 +253,9 @@ graph TD
     Unacceptable --> High --> Limited --> Minimal
 
     style Unacceptable fill:#f00,color:#fff
-    style High fill:#fa0
-    style Limited fill:#ff0
-    style Minimal fill:#0f0
-````
-
+    style High fill:#fa0,color:#000
+    style Limited fill:#ff0,color:#000
+    style Minimal fill:#0f0,color:#000
 ```
 
 **Gambar 10.6**: Tingkatan Risiko dalam EU AI Act. Semakin tinggi risiko, semakin ketat regulasinya. High-risk AI wajib memiliki risk assessment dan oversight yang ketat.
@@ -348,7 +345,7 @@ graph LR
     Img1[Pandas<br>99% Conf] -- + Noise --> Img2[Pandas + Noise]
     Img2 --> Model[AI Model]
     Model --> Res[Gibbon<br>99% Conf]
-````
+`````
 
 **Gambar 10.9**: Adversarial Example. Penambahan noise yang tidak kasat mata bagi manusia bisa membuat AI salah mengenali gambar dengan percaya diri tinggi.
 
