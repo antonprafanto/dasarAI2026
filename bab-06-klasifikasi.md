@@ -218,8 +218,6 @@ graph TD
     classDef classA fill:#ffccbc,stroke:#d84315
     classDef classB fill:#bbdefb,stroke:#1565c0
     classDef newPoint fill:#fff9c4,stroke:#fbc02d,stroke-width:2px
-
-    linkStyle 0,1,2 stroke-dasharray: 5 5;
 ```
 
 _(Titik baru (?) dikelilingi oleh tetangga terdekat. Jika K=3, kita hitung 3 tetangga terdekat dan lakukan voting mayoritas)._

@@ -168,10 +168,6 @@ graph TD
     D --> I[I]
 
     F --> J[J]
-
-    linkStyle 0 stroke:#ff0000,stroke-width:2px;
-    linkStyle 1 stroke:#ff0000,stroke-width:2px;
-    linkStyle 2 stroke:#ff0000,stroke-width:2px;
 ```
 
 **Gambar 4.3**: Urutan eksplorasi BFS (Level by Level): 1, 2, 3, 4, ... sampai 10.
@@ -229,11 +225,6 @@ graph TD
     D --> I[I]
 
     F --> J[J]
-
-    linkStyle 0 stroke:#ff0000,stroke-width:2px;
-    linkStyle 3 stroke:#ff0000,stroke-width:2px;
-    linkStyle 4 stroke:#ff0000,stroke-width:2px;
-    linkStyle 9 stroke:#ff0000,stroke-width:2px;
 ```
 
 **Gambar 4.4**: Urutan eksplorasi DFS (Depth First): 1, 2 (turun), 3 (naik-turun), 4 (Goal).
@@ -294,9 +285,6 @@ graph TD
     B --4--> E((E))
     C --2--> F((F))
     D --1--> G((G))
-
-    linkStyle 0 stroke:#2196f3,stroke-width:2px;
-    linkStyle 3 stroke:#2196f3,stroke-width:2px;
 ```
 
 **Gambar 4.6**: Uniform Cost Search memilih path dengan biaya total terendah (A→B→E = 5, A→C→F = 5, A→D→G = 6). UCS akan mengeksplorasi A, B, C, D, lalu F dan E sebelum G.
@@ -473,10 +461,6 @@ graph TD
     D --> G((G<br/>h=4))
 
     F --> Goal((GOAL<br/>h=0))
-
-    linkStyle 1 stroke:#9c27b0,stroke-width:2px;
-    linkStyle 4 stroke:#9c27b0,stroke-width:2px;
-    linkStyle 6 stroke:#9c27b0,stroke-width:2px;
 ```
 
 **Gambar 4.8**: Greedy Best-First Search selalu memilih node dengan nilai heuristic terkecil (h). Di sini A→C→F→GOAL dipilih karena tampaknya paling dekat.
@@ -561,11 +545,6 @@ graph LR
     E --1--> F((F<br/>h=2))
     D --2--> F
     F --2--> G((G<br/>h=0))
-
-    linkStyle 0 stroke:#2196f3,stroke-width:2px;
-    linkStyle 2 stroke:#2196f3,stroke-width:2px;
-    linkStyle 6 stroke:#2196f3,stroke-width:2px;
-    linkStyle 7 stroke:#2196f3,stroke-width:2px;
 ```
 
 **Gambar 4.10**: Contoh graf untuk penelusuran A\*. Angka pada garis adalah cost sebenarnya, angka di node adalah heuristic (h).
