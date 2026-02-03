@@ -1068,4 +1068,4 @@ h(S)=6, h(A)=2, h(B)=4, h(C)=2, h(G)=0
 
 ---
 
-_← [BAB 3: Representasi Pengetahuan dalam AI](./BAB-03-Representasi-Pengetahuan-dalam-AI.md) | [BAB 5: Pengantar Machine Learning](./BAB-05-Pengantar-Machine-Learning.md) →_
+_← [BAB 3: Representasi Pengetahuan dalam AI](./bab-03-representasi.md) | [BAB 5: Pengantar Machine Learning](./bab-05-machine-learning.md) →_

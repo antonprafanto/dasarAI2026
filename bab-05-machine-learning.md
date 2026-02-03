@@ -790,4 +790,4 @@ $$\text{Harga} = w_1 \times \text{Luas} + w_2 \times \text{Kamar} + w_3 \times \
 
 ---
 
-_← [BAB 4: Algoritma Pencarian](./BAB-04-Algoritma-Pencarian.md) | [BAB 6: Algoritma Klasifikasi Dasar](./BAB-06-Algoritma-Klasifikasi-Dasar.md) →_
+_← [BAB 4: Algoritma Pencarian](./bab-04-pencarian.md) | [BAB 6: Algoritma Klasifikasi Dasar](./bab-06-klasifikasi.md) →_

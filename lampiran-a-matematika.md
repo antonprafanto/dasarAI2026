@@ -245,4 +245,4 @@ Fungsi **convex** memiliki satu minimum global. Gradient descent akan konvergen 
 
 ---
 
-_← [BAB 10: Etika dan Tantangan Algoritma AI](./BAB-10-Etika-dan-Tantangan-Algoritma-AI.md) | [Lampiran B: Notasi dan Konvensi](./Lampiran-B-Notasi-dan-Konvensi.md) →_
+_← [BAB 10: Etika dan Tantangan Algoritma AI](./bab-10-etika.md) | [Lampiran B: Notasi dan Konvensi](./lampiran-b-notasi.md) →_

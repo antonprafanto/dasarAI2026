@@ -14,38 +14,38 @@ Buku ini dirancang khusus untuk Anda yang ingin memahami dunia _Artificial Intel
 
 ### Bagian Awal
 
-- [Kata Pengantar](./docs/front-matter/kata-pengantar.md)
-- [Daftar Simbol Matematika](./docs/front-matter/daftar-simbol.md)
-- [Daftar Gambar dan Tabel](./docs/front-matter/daftar-gambar.md)
+- [Kata Pengantar](./kata-pengantar.md)
+- [Daftar Simbol Matematika](./daftar-simbol.md)
+- [Daftar Gambar dan Tabel](./daftar-gambar.md)
 
 ### Bagian Utama
 
-| BAB | Judul                                                                        | Deskripsi Singkat                           |
-| --- | ---------------------------------------------------------------------------- | ------------------------------------------- |
-| 1   | [Pengantar Kecerdasan Buatan](./docs/chapters/bab-01-pengantar-ai.md)        | Apa itu AI? Sejarah, jenis, dan aplikasinya |
-| 2   | [Dasar Algoritma dan Pemecahan Masalah](./docs/chapters/bab-02-algoritma.md) | Fondasi berpikir komputasional              |
-| 3   | [Representasi Pengetahuan dalam AI](./docs/chapters/bab-03-representasi.md)  | Bagaimana AI "menyimpan" pengetahuan        |
-| 4   | [Algoritma Pencarian](./docs/chapters/bab-04-pencarian.md)                   | Strategi menemukan solusi optimal           |
-| 5   | [Pengantar Machine Learning](./docs/chapters/bab-05-machine-learning.md)     | Belajar dari data                           |
-| 6   | [Algoritma Klasifikasi Dasar](./docs/chapters/bab-06-klasifikasi.md)         | Mengelompokkan data dengan label            |
-| 7   | [Algoritma Klastering](./docs/chapters/bab-07-clustering.md)                 | Menemukan pola tersembunyi                  |
-| 8   | [Dasar Jaringan Saraf Tiruan](./docs/chapters/bab-08-neural-network.md)      | Meniru cara kerja otak manusia              |
-| 9   | [Evaluasi dan Optimasi Algoritma AI](./docs/chapters/bab-09-evaluasi.md)     | Mengukur dan meningkatkan performa          |
-| 10  | [Etika dan Tantangan Algoritma AI](./docs/chapters/bab-10-etika.md)          | Tanggung jawab dan masa depan AI            |
+| BAB | Judul                                                          | Deskripsi Singkat                           |
+| --- | -------------------------------------------------------------- | ------------------------------------------- |
+| 1   | [Pengantar Kecerdasan Buatan](./bab-01-pengantar-ai.md)        | Apa itu AI? Sejarah, jenis, dan aplikasinya |
+| 2   | [Dasar Algoritma dan Pemecahan Masalah](./bab-02-algoritma.md) | Fondasi berpikir komputasional              |
+| 3   | [Representasi Pengetahuan dalam AI](./bab-03-representasi.md)  | Bagaimana AI "menyimpan" pengetahuan        |
+| 4   | [Algoritma Pencarian](./bab-04-pencarian.md)                   | Strategi menemukan solusi optimal           |
+| 5   | [Pengantar Machine Learning](./bab-05-machine-learning.md)     | Belajar dari data                           |
+| 6   | [Algoritma Klasifikasi Dasar](./bab-06-klasifikasi.md)         | Mengelompokkan data dengan label            |
+| 7   | [Algoritma Klastering](./bab-07-clustering.md)                 | Menemukan pola tersembunyi                  |
+| 8   | [Dasar Jaringan Saraf Tiruan](./bab-08-neural-network.md)      | Meniru cara kerja otak manusia              |
+| 9   | [Evaluasi dan Optimasi Algoritma AI](./bab-09-evaluasi.md)     | Mengukur dan meningkatkan performa          |
+| 10  | [Etika dan Tantangan Algoritma AI](./bab-10-etika.md)          | Tanggung jawab dan masa depan AI            |
 
 ### Lampiran
 
-| Lampiran | Judul                                                              | Deskripsi                            |
-| -------- | ------------------------------------------------------------------ | ------------------------------------ |
-| A        | [Prasyarat Matematika](./docs/appendices/lampiran-a-matematika.md) | Review matematika yang dibutuhkan    |
-| B        | [Notasi dan Konvensi](./docs/appendices/lampiran-b-notasi.md)      | Panduan membaca rumus dan pseudocode |
-| C        | [Kunci Jawaban](./docs/appendices/lampiran-c-jawaban.md)           | Pembahasan soal latihan              |
+| Lampiran | Judul                                              | Deskripsi                            |
+| -------- | -------------------------------------------------- | ------------------------------------ |
+| A        | [Prasyarat Matematika](./lampiran-a-matematika.md) | Review matematika yang dibutuhkan    |
+| B        | [Notasi dan Konvensi](./lampiran-b-notasi.md)      | Panduan membaca rumus dan pseudocode |
+| C        | [Kunci Jawaban](./lampiran-c-jawaban.md)           | Pembahasan soal latihan              |
 
 ### Bagian Akhir
 
-- [Daftar Pustaka](./docs/back-matter/daftar-pustaka.md)
-- [Indeks](./docs/back-matter/indeks.md)
-- [Tentang Penulis](./docs/back-matter/tentang-penulis.md)
+- [Daftar Pustaka](./daftar-pustaka.md)
+- [Indeks](./indeks.md)
+- [Tentang Penulis](./tentang-penulis.md)
 
 ---
 
@@ -96,13 +96,16 @@ Setelah menyelesaikan buku ini, Anda akan mampu:
 
 ```
 dasarAI2026/
-├── README.md                 # Daftar Isi
-├── docs/
-│   ├── front-matter/         # Kata Pengantar, Daftar Simbol, dll
-│   ├── chapters/             # BAB 1-10
-│   ├── appendices/           # Lampiran A-C
-│   └── back-matter/          # Daftar Pustaka, Indeks, Penulis
-└── images/                   # Gambar dan diagram
+├── README.md             # Daftar Isi
+├── kata-pengantar.md     # Pengantar buku
+├── daftar-simbol.md      # Daftar simbol matematika
+├── daftar-gambar.md      # Daftar gambar dan tabel
+├── bab-01-*.md           # BAB 1-10
+├── lampiran-*.md         # Lampiran A-C
+├── daftar-pustaka.md     # Referensi
+├── indeks.md             # Indeks istilah
+├── tentang-penulis.md    # Profil penulis
+└── images/               # Gambar dan diagram
 ```
 
 ---

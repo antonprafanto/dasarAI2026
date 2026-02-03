@@ -634,4 +634,4 @@ Sebuah perusahaan teknologi besar mengembangkan sistem AI untuk screening CV kan
 
 ---
 
-_← [BAB 9: Evaluasi dan Optimasi Algoritma AI](./BAB-09-Evaluasi-dan-Optimasi-Algoritma-AI.md) | [Lampiran A: Prasyarat Matematika](./Lampiran-A-Prasyarat-Matematika.md) →_
+_← [BAB 9: Evaluasi dan Optimasi Algoritma AI](./bab-09-evaluasi.md) | [Lampiran A: Prasyarat Matematika](./lampiran-a-matematika.md) →_

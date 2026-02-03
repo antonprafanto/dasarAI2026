@@ -853,4 +853,4 @@ Dalam studi evaluasi, MYCIN memberikan rekomendasi yang benar dalam 65% kasus �
 
 ---
 
-_← [BAB 2: Dasar Algoritma dan Pemecahan Masalah](./BAB-02-Dasar-Algoritma-dan-Pemecahan-Masalah.md) | [BAB 4: Algoritma Pencarian](./BAB-04-Algoritma-Pencarian.md) →_
+_← [BAB 2: Dasar Algoritma dan Pemecahan Masalah](./bab-02-algoritma.md) | [BAB 4: Algoritma Pencarian](./bab-04-pencarian.md) →_

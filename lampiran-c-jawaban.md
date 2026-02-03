@@ -186,4 +186,4 @@ Lampiran ini berisi kunci jawaban untuk soal latihan pilihan ganda di setiap bab
 
 ---
 
-_← [Lampiran B: Notasi dan Konvensi](./Lampiran-B-Notasi-dan-Konvensi.md) | [Daftar Pustaka](./Daftar-Pustaka.md) →_
+_← [Lampiran B: Notasi dan Konvensi](./lampiran-b-notasi.md) | [Daftar Pustaka](./daftar-pustaka.md) →_

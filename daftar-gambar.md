@@ -206,4 +206,4 @@ Buku ini menggunakan diagram ASCII dan tabel untuk mengilustrasikan konsep-konse
 
 ---
 
-_← [00-Kata-Pengantar.md](./00-Kata-Pengantar.md) | [BAB 1: Pengantar Kecerdasan Buatan](./BAB-01-Pengantar-Kecerdasan-Buatan.md) →_
+_← [00-Kata-Pengantar.md](./kata-pengantar.md) | [BAB 1: Pengantar Kecerdasan Buatan](./bab-01-pengantar-ai.md) →_

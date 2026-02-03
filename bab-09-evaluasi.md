@@ -756,4 +756,4 @@ Prediksi churn pelanggan untuk telecom company.
 
 ---
 
-_← [BAB 8: Dasar Jaringan Saraf Tiruan](./BAB-08-Dasar-Jaringan-Saraf-Tiruan.md) | [BAB 10: Etika dan Tantangan Algoritma AI](./BAB-10-Etika-dan-Tantangan-Algoritma-AI.md) →_
+_← [BAB 8: Dasar Jaringan Saraf Tiruan](./bab-08-neural-network.md) | [BAB 10: Etika dan Tantangan Algoritma AI](./bab-10-etika.md) →_

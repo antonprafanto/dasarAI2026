@@ -851,4 +851,4 @@ Actual + 80   20
 
 ---
 
-_← [BAB 5: Pengantar Machine Learning](./BAB-05-Pengantar-Machine-Learning.md) | [BAB 7: Algoritma Klastering](./BAB-07-Algoritma-Klastering.md) →_
+_← [BAB 5: Pengantar Machine Learning](./bab-05-machine-learning.md) | [BAB 7: Algoritma Klastering](./bab-07-clustering.md) →_

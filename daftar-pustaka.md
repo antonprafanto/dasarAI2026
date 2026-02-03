@@ -146,4 +146,4 @@
 
 ---
 
-_← [Lampiran C: Kunci Jawaban Soal Latihan](./Lampiran-C-Kunci-Jawaban-Soal-Latihan.md) | [Indeks](./Indeks.md) →_
+_← [Lampiran C: Kunci Jawaban Soal Latihan](./lampiran-c-jawaban.md) | [Indeks](./indeks.md) →_

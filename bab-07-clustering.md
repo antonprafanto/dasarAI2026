@@ -700,4 +700,4 @@ _(Plot 2D hasil reduksi dimensi. Kelompok pelanggan terpisah secara visual di ku
 
 ---
 
-_← [BAB 6: Algoritma Klasifikasi Dasar](./BAB-06-Algoritma-Klasifikasi-Dasar.md) | [BAB 8: Dasar Jaringan Saraf Tiruan](./BAB-08-Dasar-Jaringan-Saraf-Tiruan.md) →_
+_← [BAB 6: Algoritma Klasifikasi Dasar](./bab-06-klasifikasi.md) | [BAB 8: Dasar Jaringan Saraf Tiruan](./bab-08-neural-network.md) →_

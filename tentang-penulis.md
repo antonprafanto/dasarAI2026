@@ -48,4 +48,4 @@ Profil akademiknya dapat ditemukan di:
 
 ---
 
-_← [Indeks](./Indeks.md)_
+_← [Indeks](./indeks.md)_

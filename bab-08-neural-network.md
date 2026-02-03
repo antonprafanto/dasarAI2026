@@ -765,4 +765,4 @@ Input (784) → Dense(256, ReLU) → Dropout(0.3) → Dense(128, ReLU) → Dropo
 
 ---
 
-_← [BAB 7: Algoritma Klastering](./BAB-07-Algoritma-Klastering.md) | [BAB 9: Evaluasi dan Optimasi Algoritma AI](./BAB-09-Evaluasi-dan-Optimasi-Algoritma-AI.md) →_
+_← [BAB 7: Algoritma Klastering](./bab-07-clustering.md) | [BAB 9: Evaluasi dan Optimasi Algoritma AI](./bab-09-evaluasi.md) →_

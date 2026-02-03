@@ -390,4 +390,4 @@ AlphaGo memenangkan seri dengan skor 4-1. Yang lebih mengejutkan adalah **langka
 
 ---
 
-_Lanjut ke [BAB 2: Dasar-dasar Algoritma dan Pemecahan Masalah](./BAB-02-Dasar-Algoritma-dan-Pemecahan-Masalah.md) →_
+_Lanjut ke [BAB 2: Dasar-dasar Algoritma dan Pemecahan Masalah](./bab-02-algoritma.md) →_

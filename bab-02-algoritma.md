@@ -707,7 +707,7 @@ KEMBALIKAN
 
 ---
 
-_← [BAB 1: Pengantar Kecerdasan Buatan](./BAB-01-Pengantar-Kecerdasan-Buatan.md) | [BAB 3: Representasi Pengetahuan dalam AI](./BAB-03-Representasi-Pengetahuan-dalam-AI.md) →_
+_← [BAB 1: Pengantar Kecerdasan Buatan](./bab-01-pengantar-ai.md) | [BAB 3: Representasi Pengetahuan dalam AI](./bab-03-representasi.md) →_
 
 ```
 

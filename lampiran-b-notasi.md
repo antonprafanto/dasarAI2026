@@ -246,4 +246,4 @@ FUNGSI NamaFungsi(parameter1, parameter2):
 
 ---
 
-_← [Lampiran A: Prasyarat Matematika](./Lampiran-A-Prasyarat-Matematika.md) | [Lampiran C: Kunci Jawaban Soal Latihan](./Lampiran-C-Kunci-Jawaban-Soal-Latihan.md) →_
+_← [Lampiran A: Prasyarat Matematika](./lampiran-a-matematika.md) | [Lampiran C: Kunci Jawaban Soal Latihan](./lampiran-c-jawaban.md) →_
