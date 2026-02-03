@@ -43,7 +43,8 @@ graph TD
         D4[4. Algorithmic Bias<br>Model amplification]
         D5[5. Deployment Bias<br>Context mismatch]
     end
-    D1 & D2 & D3 & D4 & D5 :::bias
+    class D1,D2,D3,D4,D5 bias
+    classDef bias fill:#fcc,stroke:#f00,stroke-width:2px;
 ```
 
 **Gambar 10.1**: Sumber-sumber Bias AI. Bias bisa masuk di setiap tahap pipeline machine learning.
@@ -173,14 +174,20 @@ graph LR
 
 ### 10.3.5 Trade-off: Accuracy vs Interpretability
 
+````mermaid
 ```mermaid
-xychart-beta
-    title "Accuracy vs Interpretability Trade-off"
-    x-axis "Interpretability" [Low, Med-Low, Medium, Med-High, High]
-    y-axis "Accuracy" 0 --> 1
-    line [0.95, 0.90, 0.85, 0.80, 0.70]
-    bar [0.95, 0.90, 0.85, 0.80, 0.70]
-```
+graph TD
+    HighAcc[Deep Learning: High Accuracy, Low Interpretability]
+    Med[Random Forest / SVM: Balanced]
+    HighInt[Linear Regression / Decision Tree: Low Accuracy, High Interpretability]
+
+    HighAcc --- Med --- HighInt
+
+    style HighAcc fill:#f99
+    style HighInt fill:#9f9
+````
+
+````
 
 **Gambar 10.5**: Trade-off Accuracy vs Interpretability. Umumnya, semakin tinggi akurasi model (seperti Deep Learning di kiri atas), semakin rendah interpretability-nya. Model yang sangat interpretable (Linear Regression di kanan bawah) cenderung memiliki akurasi lebih rendah data kompleks.
 _(Catatan: x-axis terbalik untuk ilustrasi sesuai konsep 'Trade-off')_
@@ -238,17 +245,20 @@ AI membutuhkan data — sering kali data pribadi. Bagaimana menyeimbangkan utili
 ### 10.5.2 EU AI Act - Risk Categories
 
 ```mermaid
-block-beta
-    columns 1
-    Unacceptable["UNACCEPTABLE RISK (Banned)<br>Social scoring, Manipulation, Real-time Biometric"]
-    High["HIGH RISK (Regulated)<br>Recruitment, Credit, Medical, Law Enforcement"]
-    Limited["LIMITED RISK (Transparency)<br>Chatbots, Deepfakes"]
-    Minimal["MINIMAL RISK (Free)<br>Spam filters, Games"]
+graph TD
+    Unacceptable[⛔ UNACCEPTABLE RISK: Banned]
+    High[⚠️ HIGH RISK: Regulated]
+    Limited[📝 LIMITED RISK: Transparency]
+    Minimal[✅ MINIMAL RISK: Free]
 
-    class Unacceptable red
-    class High orange
-    class Limited yellow
-    class Minimal green
+    Unacceptable --> High --> Limited --> Minimal
+
+    style Unacceptable fill:#f00,color:#fff
+    style High fill:#fa0
+    style Limited fill:#ff0
+    style Minimal fill:#0f0
+````
+
 ```
 
 **Gambar 10.6**: Tingkatan Risiko dalam EU AI Act. Semakin tinggi risiko, semakin ketat regulasinya. High-risk AI wajib memiliki risk assessment dan oversight yang ketat.
@@ -276,36 +286,11 @@ block-beta
 
 ### 10.6.1 Dampak Otomasi
 
-```mermaid
-block-beta
-    columns 3
-    block:Risk
-        Risky["RISK TINGGI"]
-        R1("Repetitive")
-        R2("Data Entry")
-        R3("Drivers")
-        R4("Cashiers")
-    end
-
-    block:Change
-        Changing["BERUBAH"]
-        C1("Doctors")
-        C2("Lawyers")
-        C3("Programmers")
-        C4("Designers")
-    end
-
-    block:New
-        NewJobs["JOB BARU"]
-        N1("AI Ethicist")
-        N2("Prompt Eng")
-        N3("AI Trainer")
-        N4("Data Scientist")
-    end
-
-    class Risky,R1,R2,R3,R4 r
-    class Changing,C1,C2,C3,C4 c
-    class NewJobs,N1,N2,N3,N4 n
+| Kelompok | Status | Contoh Pekerjaan |
+| :--- | :--- | :--- |
+| **RISK TINGGI** | Terancam Automasi | Data Entry, Drivers, Cashiers, Repetitive Tasks |
+| **BERUBAH** | Augmented by AI | Doctors, Lawyers, Programmers, Designers |
+| **JOB BARU** | Muncul karena AI | AI Ethicist, Prompt Engineer, AI Trainer, Data Scientist |
 ```
 
 **Gambar 10.7**: Dampak AI terhadap Pekerjaan. Pekerjaan rutin berisiko digantikan, pekerjaan profesional akan teraugmentasi, dan pekerjaan baru akan muncul.
@@ -345,13 +330,12 @@ block-beta
 
 ### 10.7.3 Risiko Jangka Pendek vs Panjang
 
-```mermaid
-timeline
-    title Timeline Risiko AI
-    Jangka Pendek (0-5 thn) : Bias & Diskriminasi : Deepfakes : Privacy Violations : Surveillance
-    Jangka Menengah (5-20 thn) : Mass Unemployment : Power Concentration : Weaponization
-    Jangka Panjang (>20 thn) : Superintelligence : Alignment Problem : Loss of Control
-```
+````mermaid
+| Jangka Waktu | Risiko Utama |
+| :--- | :--- |
+| **Jangka Pendek** (0-5 thn) | Bias & Diskriminasi, Deepfakes, Privacy Violations, Surveillance |
+| **Jangka Menengah** (5-20 thn) | Mass Unemployment, Power Concentration, Weaponization |
+| **Jangka Panjang** (>20 thn) | Superintelligence, Alignment Problem, Loss of Control |
 
 **Gambar 10.8**: Risiko AI Jangka Pendek hingga Panjang. Risiko berkembang dari isu sosial konkret saat ini hingga risiko eksistensial di masa depan.
 
@@ -364,7 +348,7 @@ graph LR
     Img1[Pandas<br>99% Conf] -- + Noise --> Img2[Pandas + Noise]
     Img2 --> Model[AI Model]
     Model --> Res[Gibbon<br>99% Conf]
-```
+````
 
 **Gambar 10.9**: Adversarial Example. Penambahan noise yang tidak kasat mata bagi manusia bisa membuat AI salah mengenali gambar dengan percaya diri tinggi.
 
@@ -383,29 +367,29 @@ graph LR
 ```mermaid
 flowchart TD
     Root["Responsible AI"]
-    
+
     Root --> F["Fairness"]
     Root --> RS["Reliability & Safety"]
     Root --> PS["Privacy & Security"]
     Root --> IN["Inclusiveness"]
     Root --> TR["Transparency"]
     Root --> AC["Accountability"]
-    
+
     F --> F1[Test for bias]
     F --> F2[Mitigate discrimination]
-    
+
     RS --> RS1[Testing]
     RS --> RS2[Failsafe]
-    
+
     PS --> PS1[Protect data]
     PS --> PS2[Secure deployment]
-    
+
     IN --> IN1[Accessible]
     IN --> IN2[Diverse users]
-    
+
     TR --> TR1[Explainable]
     TR --> TR2[Disclosure]
-    
+
     AC --> AC1[Ownership]
     AC --> AC2[Oversight]
 ```
