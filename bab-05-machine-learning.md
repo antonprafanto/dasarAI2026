@@ -129,8 +129,8 @@ Dalam **Reinforcement Learning**, _agent_ belajar melalui interaksi dengan _envi
 
 ```mermaid
 graph TD
-    Agent[AGENT<br/>Decision Maker]
-    Env[ENVIRONMENT<br/>Dunia/Sistem]
+    Agent["AGENT Decision Maker"]
+    Env["ENVIRONMENT Dunia/Sistem"]
 
     Agent -->|Action| Env
     Env -->|State + Reward| Agent
@@ -158,9 +158,9 @@ Kita ingin model yang **generalizable** — bisa perform baik pada data baru, bu
 
 ```mermaid
 graph TD
-    Total[TOTAL DATASET 100%] --> TrainSet[TRAINING SET<br/>60-80%]
-    Total --> ValSet[VALIDATION SET<br/>10-20%]
-    Total --> TestSet[TEST SET<br/>10-20%]
+    Total[TOTAL DATASET 100%] --> TrainSet["TRAINING SET 60-80%"]
+    Total --> ValSet["VALIDATION SET 10-20%"]
+    Total --> TestSet["TEST SET 10-20%"]
 
     TrainSet -->|Melatih Parameter| Model
     ValSet -->|Tuning Hyperparameter| Model
@@ -344,8 +344,8 @@ Semakin banyak fitur (dimensi), semakin sulit bagi model untuk belajar:
 graph TD
     subgraph SD [Space 2D Asli]
     Points[Data Poin Tersebar]
-    PC1[Garis PC1<br/>Variansi Maksimum]
-    PC2[Garis PC2<br/>Tegak Lurus PC1]
+    PC1["Garis PC1 Variansi Maksimum"]
+    PC2["Garis PC2 Tegak Lurus PC1"]
     Points -.- PC1
     Points -.- PC2
     end

@@ -500,8 +500,8 @@ graph TD
 graph LR
     subgraph AStar [A* Function]
     direction TB
-    G[g_n<br/>Cost so far] -- + --> F[f_n<br/>Total estimated cost]
-    H[h_n<br/>Heuristic to goal] -- + --> F
+    G["g_n Cost so far"] -- + --> F["f_n Total estimated cost"]
+    H["h_n Heuristic to goal"] -- + --> F
     end
 
     Start((Start)) -->|g_n| Node((Current Node))
@@ -739,11 +739,11 @@ FUNGSI SimulatedAnnealing(initial, schedule):
 
 ```mermaid
 flowchart TD
-    Init[1. INITIALIZATION<br/>Populasi Awal] --> Eval[2. EVALUATION<br/>Hitung Fitness]
-    Eval --> Select[3. SELECTION<br/>Pilih Parent]
-    Select --> Cross[4. CROSSOVER<br/>Kawin Silang]
-    Cross --> Mut[5. MUTATION<br/>Mutasi Gen]
-    Mut --> Replace[6. REPLACEMENT<br/>Generasi Baru]
+    Init["1. INITIALIZATION Populasi Awal"] --> Eval["2. EVALUATION Hitung Fitness"]
+    Eval --> Select["3. SELECTION Pilih Parent"]
+    Select --> Cross["4. CROSSOVER Kawin Silang"]
+    Cross --> Mut["5. MUTATION Mutasi Gen"]
+    Mut --> Replace["6. REPLACEMENT Generasi Baru"]
     Replace -->|Belum Konvergen| Eval
     Replace -->|Konvergen| Finish((Selesai))
 ```

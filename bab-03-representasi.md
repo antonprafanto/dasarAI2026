@@ -35,8 +35,8 @@ Representasi pengetahuan adalah jembatan antara dunia nyata dan pemahaman komput
 
 ```mermaid
 graph TD
-    World[DUNIA NYATA<br/>(Kompleks, Ambigu)] -->|Abstraksi| Rep[REPRESENTASI<br/>(Terstruktur, Formal)]
-    Rep -->|Reasoning| Reason[PENALARAN<br/>(Logika/Inferensi)]
+    World["DUNIA NYATA (Kompleks, Ambigu)"] -->|Abstraksi| Rep["REPRESENTASI (Terstruktur, Formal)"]
+    Rep -->|Reasoning| Reason["PENALARAN (Logika/Inferensi)"]
     Reason -->|Action| Decision[KEPUTUSAN / AKSI]
 ```
 
@@ -193,7 +193,7 @@ graph TD
     Eagle[ELANG]
     Penguin[PINGUIN]
     Dove[MERPATI]
-    Garuda[GARUDA<br/>(Individu)]
+    Garuda["GARUDA (Individu)"]
 
     Bird -->|KIND-OF| Animal
     Eagle -->|KIND-OF| Bird
@@ -444,13 +444,13 @@ IF <condition> THEN <action>
 ```mermaid
 graph TD
     subgraph KB[Knowledge Base]
-        Rules[Rule Base<br/>IF-THEN]
-        Facts[Fact Base<br/>Data & Fakta]
+        Rules["Rule Base IF-THEN"]
+        Facts["Fact Base Data & Fakta"]
     end
 
     subgraph Engine[Inference Engine]
-        FC[Forward Chaining<br/>Data -> Kesimpulan]
-        BC[Backward Chaining<br/>Tujuan -> Data]
+        FC["Forward Chaining Data -> Kesimpulan"]
+        BC["Backward Chaining Tujuan -> Data"]
     end
 
     KB --> Engine
@@ -511,13 +511,13 @@ Hasil: Pasien kemungkinan besar menderita FLU
 ```mermaid
 flowchart TD
     Human((AHLI / Expert)) -->|Wawancara| KAS[Knowledge Acquisition System]
-    KAS -->|Input Aturan| KB[(KNOWLEDGE BASE<br/>Aturan & Fakta)]
+    KAS -->|Input Aturan| KB["(KNOWLEDGE BASE Aturan & Fakta)"]
 
-    KB --> IE[INFERENCE ENGINE<br/>Mesin Inferensi]
+    KB --> IE["INFERENCE ENGINE Mesin Inferensi"]
 
     User((PENGGUNA / User)) <-->|Tanya Jawab| IE
 
-    IE <--> Explain[EXPLANATION FACILITY<br/>Penjelasan 'Why' & 'How']
+    IE <--> Explain["EXPLANATION FACILITY Penjelasan 'Why' & 'How'"]
 ```
 
 **Gambar 3.7**: Arsitektur lengkap dari sebuah Expert System.

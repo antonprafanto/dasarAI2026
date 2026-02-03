@@ -527,12 +527,12 @@ Langkah 6: (4, 1) → Tuang ke kendi 3L → (2, 3) ✓
 
 ```mermaid
 graph TD
-    Step0[Start<br/>(4L: 0, 3L: 0)] -->|Isi 4L| Step1[Langkah 1<br/>(4L: 4, 3L: 0)]
-    Step1 -->|Tuang ke 3L| Step2[Langkah 2<br/>(4L: 1, 3L: 3)]
-    Step2 -->|Kosongkan 3L| Step3[Langkah 3<br/>(4L: 1, 3L: 0)]
-    Step3 -->|Tuang 4L ke 3L| Step4[Langkah 4<br/>(4L: 0, 3L: 1)]
-    Step4 -->|Isi 4L| Step5[Langkah 5<br/>(4L: 4, 3L: 1)]
-    Step5 -->|Tuang ke 3L| Step6[Langkah 6: GOAL<br/>(4L: 2, 3L: 3)]
+    S0["Start: 0, 0"] -->|Isi 4L| S1["L1: 4, 0"]
+    S1 -->|Tuang ke 3L| S2["L2: 1, 3"]
+    S2 -->|Kosongkan 3L| S3["L3: 1, 0"]
+    S3 -->|Tuang ke 3L| S4["L4: 0, 1"]
+    S4 -->|Isi 4L| S5["L5: 4, 1"]
+    S5 -->|Tuang ke 3L| S6["L6: 2, 3 GOAL"]
 ```
 
 **Gambar 2.9**: Visualisasi langkah penyelesaian Water Jug Problem (mendapatkan 2 liter dari kendi 4L dan 3L).
