@@ -38,17 +38,33 @@ Single train-test split memiliki kelemahan:
 
 **K-Fold CV** membagi data menjadi k bagian (folds) dan melakukan training k kali, setiap kali menggunakan fold berbeda sebagai validation set.
 
-5-Fold Cross Validation:
+```mermaid
+graph LR
+    subgraph Fold1 [Fold 1]
+        direction LR
+        D1[VAL]:::val --- D2[Train] --- D3[Train] --- D4[Train] --- D5[Train]
+    end
+    subgraph Fold2 [Fold 2]
+        direction LR
+        E1[Train] --- E2[VAL]:::val --- E3[Train] --- E4[Train] --- E5[Train]
+    end
+    subgraph Fold3 [Fold 3]
+        direction LR
+        F1[Train] --- F2[Train] --- F3[VAL]:::val --- F4[Train] --- F5[Train]
+    end
+    subgraph Fold4 [Fold 4]
+        direction LR
+        G1[Train] --- G2[Train] --- G3[Train] --- G4[VAL]:::val --- G5[Train]
+    end
+    subgraph Fold5 [Fold 5]
+        direction LR
+        H1[Train] --- H2[Train] --- H3[Train] --- H4[Train] --- H5[VAL]:::val
+    end
 
-| Fold | Part 1 | Part 2 | Part 3 | Part 4 | Part 5 | Score |
-| ---- | ------ | ------ | ------ | ------ | ------ | ----- |
-| 1    | VAL    | Train  | Train  | Train  | Train  | 0.85  |
-| 2    | Train  | VAL    | Train  | Train  | Train  | 0.82  |
-| 3    | Train  | Train  | VAL    | Train  | Train  | 0.88  |
-| 4    | Train  | Train  | Train  | VAL    | Train  | 0.84  |
-| 5    | Train  | Train  | Train  | Train  | VAL    | 0.86  |
+    classDef val fill:#f96,stroke:#333,stroke-width:2px;
+```
 
-Final Score = Mean ± Std = 0.85 ± 0.02
+**Score Rata-rata**: 0.85 ± 0.02
 
 **Gambar 9.1**: Ilustrasi 5-Fold Cross Validation. Data dibagi menjadi 5 bagian. Model dilatih 5 kali, setiap kali menggunakan satu bagian berbeda sebagai validasi (orange).
 
@@ -132,13 +148,25 @@ Total kombinasi: 3 × 3 = 9
 
 Grid Search Results (3×3 = 9 combinations):
 
-|        | C=0.1 | C=1    | C=10 |
-| ------ | ----- | ------ | ---- |
-| γ=0.01 | 0.82  | 0.84   | 0.85 |
-| γ=0.1  | 0.85  | 0.89\* | 0.88 |
-| γ=1    | 0.83  | 0.86   | 0.84 |
-
-\*Best score: C=1, gamma=0.1 → 0.89
+```mermaid
+graph TD
+    subgraph Grid_Search [Grid Search Exploration]
+        direction TB
+        subgraph G1 [Gamma 0.01]
+            direction LR
+            C1_1[C=0.1: 0.82] --- C1_2[C=1: 0.84] --- C1_3[C=10: 0.85]
+        end
+        subgraph G2 [Gamma 0.1]
+            direction LR
+            C2_1[C=0.1: 0.85] --- C2_2[C=1: 0.89 BEST]:::best --- C2_3[C=10: 0.88]
+        end
+        subgraph G3 [Gamma 1]
+            direction LR
+            C3_1[C=0.1: 0.83] --- C3_2[C=1: 0.86] --- C3_3[C=10: 0.84]
+        end
+    end
+    classDef best fill:#0f0,stroke:#333,stroke-width:2px;
+```
 
 **Gambar 9.2**: Hasil Grid Search. Seluruh kombinasi hyperparameter dicoba dalam bentuk grid. \* menunjukkan performa terbaik.
 
