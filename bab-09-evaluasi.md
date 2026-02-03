@@ -250,12 +250,16 @@ graph TD
 
 ````
 ```mermaid
-xychart-beta
-    title "Bayesian Optimization Concept"
-    x-axis "Hyperparameter Space" [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    y-axis "Score / Uncertainty" 0 --> 1
-    line [0.5, 0.6, 0.4, 0.7, 0.5, 0.8, 0.6, 0.5, 0.4, 0.3, 0.5]
-    bar [0.1, 0.1, 0.3, 0.1, 0.4, 0.05, 0.1, 0.5, 0.6, 0.7, 0.2]
+graph TD
+    subgraph Bayesian_Loop [Bayesian Optimization Cycle]
+        direction TB
+        A[Start: Initial Samples] --> B[Fit Gaussian Process Model]
+        B -->|Build Probabilistic Model| C[Acquisition Function]
+        C -->|Select Max Potential Point| D[Evaluate True Objective]
+        D -->|New Data Point| B
+
+        style C fill:#f9f,stroke:#333
+    end
 ````
 
 **Gambar 9.4**: Bayesian Optimization. Titik (line) adalah mean prediction, bar adalah uncertainty. Algoritma memilih next point berdasarkan Acquisition Function.
@@ -493,12 +497,22 @@ graph TD
 **Learning curves** menunjukkan performa model seiring bertambahnya training data.
 
 ```mermaid
-xychart-beta
-    title "Learning Curves (High Variance / Overfitting)"
-    x-axis "Training Size" [100, 500, 1000, 5000, 10000]
-    y-axis "Score" 0.5 --> 1.0
-    line [0.99, 0.99, 0.98, 0.98, 0.97]
-    line [0.60, 0.65, 0.70, 0.75, 0.78]
+graph LR
+    subgraph Small_Data [Small Training Data]
+        direction TB
+        S1[Train Score: 1.0 High]
+        S2[CV Score: 0.6 Low]
+        S1 --- S2
+        Result1[Large Gap = Overfitting]
+    end
+
+    subgraph Big_Data [Large Training Data]
+        direction TB
+        B1[Train Score: 0.9]
+        B2[CV Score: 0.85]
+        B1 --- B2
+        Result2[Gap Closing = Good Generalized]
+    end
 ````
 
 **Gambar 9.9**: Learning Curves dengan High Variance (Overfitting). Ada gap besar antara Training score (tinggi) dan CV score (rendah). Solusi: tambah data.
@@ -516,12 +530,24 @@ xychart-beta
 **Validation curves** menunjukkan performa vs hyperparameter.
 
 ```mermaid
-xychart-beta
-    title "Validation Curve (Hyperparameter Tuning)"
-    x-axis "Complexity (e.g., Tree Depth)" [1, 3, 5, 7, 10, 20]
-    y-axis "Score" 0.4 --> 1.0
-    line [0.6, 0.8, 0.9, 0.95, 0.98, 1.0]
-    line [0.55, 0.75, 0.85, 0.82, 0.75, 0.60]
+graph TD
+    subgraph Underfitting [Low Complexity]
+        U1[Train Score: Low]
+        U2[Val Score: Low]
+    end
+
+    subgraph Optimal [Optimal Complexity]
+        O1[Train Score: High]
+        O2[Val Score: High (Peak)]
+        style Optimal fill:#bfb,stroke:#333
+    end
+
+    subgraph Overfitting [High Complexity]
+        V1[Train Score: Very High]
+        V2[Val Score: Dropping]
+    end
+
+    Underfitting --> Optimal --> Overfitting
 ```
 
 **Gambar 9.10**: Validation Curve. Training score terus naik seiring kompleksitas, tapi Validation score mencapai puncak lalu turun (overfitting). Kit a ingin memilih hyperparameter di puncak validation score.
@@ -532,12 +558,13 @@ Untuk regression, analisis residuals:
 $$\text{residual} = y_{actual} - y_{predicted}$$
 
 ```mermaid
-xychart-beta
-    title "Residual Analysis"
-    x-axis "Predicted Value" [10, 20, 30, 40, 50]
-    y-axis "Residual (Actual - Pred)" -2 --> 2
-    line [0.5, -0.2, 0.8, -0.5, 0.3]
-    bar [0.5, -0.2, 0.8, -0.5, 0.3]
+graph TD
+    Data[Calculate Residuals: Actual - Predicted] --> Check{Is Distribution Random?}
+    Check -->|Yes| Good[Good Model: Errors make sense]
+    Check -->|No / Pattern Exists| Bad[Bad Model: Missing nonlinear pattern]
+
+    style Good fill:#bfb
+    style Bad fill:#fbb
 ```
 
 **Gambar 9.11**: Analisis Residual. Residual yang bagus tersebar acak di sekitar nol (randomness). Jika ada pola, berarti model melewatkan informasi tertentu.
