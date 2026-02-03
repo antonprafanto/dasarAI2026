@@ -265,22 +265,20 @@ Selain waktu, kita juga perlu mempertimbangkan **ruang memori** yang digunakan.
 George Pólya, matematikawan Hungaria, merumuskan empat langkah pemecahan masalah yang masih relevan hingga hari ini:
 
 ```mermaid
-flowchart TD
-    subgraph Polya["🔄 Langkah Pemecahan Masalah George Polya"]
-        direction TB
-        Step1["1️⃣ UNDERSTAND<br/>Pahami Masalah"] -->|Analisis| Step2["2️⃣ PLAN<br/>Rencanakan Solusi"]
-        Step2 -->|Desain| Step3["3️⃣ EXECUTE<br/>Jalankan Rencana"]
-        Step3 -->|Verifikasi| Step4{"4️⃣ REVIEW<br/>Tinjau Ulang"}
-
-        Step4 -->|Solusi Benar| Finish(("✅ Selesai"))
-        Step4 -->|Masih Salah| Step2
-
-        Step1 -.-> D1["❓ Ditanya<br/>❓ Diketahui<br/>❓ Batasan"]
-        Step2 -.-> D2["📋 Strategi<br/>🔍 Pola<br/>🧩 Sub-masalah"]
-        Step3 -.-> D3["⚙️ Implementasi<br/>✔️ Cek Langkah"]
-        Step4 -.-> D4["🎯 Validasi<br/>⚡ Optimasi"]
-    end
+flowchart LR
+    A[1. UNDERSTAND] --> B[2. PLAN]
+    B --> C[3. EXECUTE]
+    C --> D[4. REVIEW]
+    D -->|OK| E((Selesai))
+    D -->|Revisi| B
 ```
+
+| Langkah | Nama | Kegiatan |
+|:-------:|:----:|----------|
+| 1 | **UNDERSTAND** | Pahami masalah: Apa yang ditanya? Apa yang diketahui? |
+| 2 | **PLAN** | Rencanakan solusi: Strategi apa? Pola apa? |
+| 3 | **EXECUTE** | Jalankan rencana: Implementasi langkah demi langkah |
+| 4 | **REVIEW** | Tinjau ulang: Validasi hasil, optimasi jika perlu |
 
 **Gambar 2.4**: Diagram alur langkah pemecahan masalah menurut George Polya (Understand, Plan, Execute, Review).
 
