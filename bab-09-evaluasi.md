@@ -150,7 +150,7 @@ Grid Search Results (3×3 = 9 combinations):
 
 ```mermaid
 graph TD
-    subgraph Grid_Search [Grid Search Exploration]
+    subgraph Grid_Search [Grid Search]
         direction TB
         subgraph G1 [Gamma 0.01]
             direction LR
@@ -250,7 +250,7 @@ graph TD
 
 ```mermaid
 graph TD
-    subgraph Bayesian_Loop [Bayesian Optimization Cycle]
+    subgraph Bayesian_Loop
         direction TB
         A[Start: Initial Samples] --> B[Fit Gaussian Process Model]
         B -->|Build Probabilistic Model| C[Acquisition Function]
@@ -263,7 +263,6 @@ graph TD
 ```
 
 **Gambar 9.4**: Bayesian Optimization. Titik (line) adalah mean prediction, bar adalah uncertainty. Algoritma memilih next point berdasarkan Acquisition Function.
-
 
 **Acquisition Functions:**
 
@@ -470,7 +469,6 @@ graph TD
 
 **Gambar 9.8**: Stacking. Prediksi dari model-model dasar (Level 0) menjadi fitur input untuk model meta-learner (Level 1).
 
-
 **Training Stacking:**
 
 1. Train base models menggunakan cross-validation
@@ -497,7 +495,7 @@ graph TD
 
 ```mermaid
 graph LR
-    subgraph Small_Data [Small Training Data]
+    subgraph Small_Data [Small Data]
         direction TB
         S1[Train Score: 1.0 High]
         S2[CV Score: 0.6 Low]
@@ -505,7 +503,7 @@ graph LR
         Result1[Large Gap = Overfitting]
     end
 
-    subgraph Big_Data [Large Training Data]
+    subgraph Big_Data [Large Data]
         direction TB
         B1[Train Score: 0.9]
         B2[CV Score: 0.85]
@@ -531,7 +529,7 @@ graph LR
 
 ```mermaid
 graph TD
-    subgraph Underfitting [Low Complexity]
+    subgraph Underfitting [Underfit]
         U1[Train Score: Low]
         U2[Val Score: Low]
     end
@@ -542,7 +540,7 @@ graph TD
         style Optimal fill:#bfb,stroke:#333
     end
 
-    subgraph Overfitting [High Complexity]
+    subgraph Overfitting [Overfit]
         V1[Train Score: Very High]
         V2[Val Score: Dropping]
     end
