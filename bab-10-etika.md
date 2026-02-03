@@ -287,8 +287,6 @@ graph TD
 | **BERUBAH**     | Augmented by AI   | Doctors, Lawyers, Programmers, Designers                 |
 | **JOB BARU**    | Muncul karena AI  | AI Ethicist, Prompt Engineer, AI Trainer, Data Scientist |
 
-`````
-
 **Gambar 10.7**: Dampak AI terhadap Pekerjaan. Pekerjaan rutin berisiko digantikan, pekerjaan profesional akan teraugmentasi, dan pekerjaan baru akan muncul.
 
 ### 10.6.2 Studi Dampak
@@ -326,12 +324,11 @@ graph TD
 
 ### 10.7.3 Risiko Jangka Pendek vs Panjang
 
-````mermaid
-| Jangka Waktu | Risiko Utama |
-| :--- | :--- |
-| **Jangka Pendek** (0-5 thn) | Bias & Diskriminasi, Deepfakes, Privacy Violations, Surveillance |
-| **Jangka Menengah** (5-20 thn) | Mass Unemployment, Power Concentration, Weaponization |
-| **Jangka Panjang** (>20 thn) | Superintelligence, Alignment Problem, Loss of Control |
+| Jangka Waktu                   | Risiko Utama                                                     |
+| :----------------------------- | :--------------------------------------------------------------- |
+| **Jangka Pendek** (0-5 thn)    | Bias & Diskriminasi, Deepfakes, Privacy Violations, Surveillance |
+| **Jangka Menengah** (5-20 thn) | Mass Unemployment, Power Concentration, Weaponization            |
+| **Jangka Panjang** (>20 thn)   | Superintelligence, Alignment Problem, Loss of Control            |
 
 **Gambar 10.8**: Risiko AI Jangka Pendek hingga Panjang. Risiko berkembang dari isu sosial konkret saat ini hingga risiko eksistensial di masa depan.
 
@@ -344,7 +341,7 @@ graph LR
     Img1[Pandas<br>99% Conf] -- + Noise --> Img2[Pandas + Noise]
     Img2 --> Model[AI Model]
     Model --> Res[Gibbon<br>99% Conf]
-`````
+```
 
 **Gambar 10.9**: Adversarial Example. Penambahan noise yang tidak kasat mata bagi manusia bisa membuat AI salah mengenali gambar dengan percaya diri tinggi.
 
