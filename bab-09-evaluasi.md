@@ -248,7 +248,6 @@ graph TD
 2. Gunakan acquisition function untuk pilih next point
 3. Ulangi
 
-````
 ```mermaid
 graph TD
     subgraph Bayesian_Loop [Bayesian Optimization Cycle]
@@ -260,11 +259,9 @@ graph TD
 
         style C fill:#f9f,stroke:#333
     end
-````
 
 **Gambar 9.4**: Bayesian Optimization. Titik (line) adalah mean prediction, bar adalah uncertainty. Algoritma memilih next point berdasarkan Acquisition Function.
 
-````
 
 **Acquisition Functions:**
 
@@ -327,7 +324,6 @@ graph TD
 
     S1 & S2 & S3 --> Sel
     Sel --> Test
-````
 
 **Gambar 9.5**: Pipeline Model Selection. Beberapa kandidat model dilatih dan divalidasi. Model terbaik dipilih berdasarkan CV Score untuk dievaluasi final di Test Data.
 
@@ -438,7 +434,6 @@ Fₘ(x) = Fₘ₋₁(x) + γₘ × hₘ(x)  // Final prediction
 
 **Stacking** menggunakan model ("meta-learner") untuk menggabungkan prediksi dari models lain.
 
-````
 ```mermaid
 graph TD
     subgraph Level_0 [Level 0: Base Models]
@@ -466,11 +461,9 @@ graph TD
 
     P1 & P2 & P3 --> Meta
     Meta --> Final
-````
 
 **Gambar 9.8**: Stacking. Prediksi dari model-model dasar (Level 0) menjadi fitur input untuk model meta-learner (Level 1).
 
-````
 
 **Training Stacking:**
 
@@ -513,7 +506,6 @@ graph LR
         B1 --- B2
         Result2[Gap Closing = Good Generalized]
     end
-````
 
 **Gambar 9.9**: Learning Curves dengan High Variance (Overfitting). Ada gap besar antara Training score (tinggi) dan CV score (rendah). Solusi: tambah data.
 
