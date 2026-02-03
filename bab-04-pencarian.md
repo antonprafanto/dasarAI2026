@@ -58,9 +58,6 @@ graph TD
 
     F --> J[J]
 
-    style Root fill:#e3f2fd
-    style J fill:#c8e6c9,stroke:#2e7d32,stroke-width:2px
-
     subgraph Level1 [Level 1]
     B
     C
@@ -171,17 +168,6 @@ graph TD
     linkStyle 0 stroke:#ff0000,stroke-width:2px;
     linkStyle 1 stroke:#ff0000,stroke-width:2px;
     linkStyle 2 stroke:#ff0000,stroke-width:2px;
-
-    style A fill:#ffcc80
-    style B fill:#fff9c4
-    style C fill:#fff9c4
-    style D fill:#fff9c4
-    style E fill:#e1bee7
-    style F fill:#e1bee7
-    style G fill:#e1bee7
-    style H fill:#e1bee7
-    style I fill:#e1bee7
-    style J fill:#c8e6c9
 ```
 
 **Gambar 4.3**: Urutan eksplorasi BFS (Level by Level): 1, 2, 3, 4, ... sampai 10.
@@ -244,12 +230,6 @@ graph TD
     linkStyle 3 stroke:#ff0000,stroke-width:2px;
     linkStyle 4 stroke:#ff0000,stroke-width:2px;
     linkStyle 9 stroke:#ff0000,stroke-width:2px;
-
-    style A fill:#ffcc80
-    style B fill:#fff9c4
-    style E fill:#e1bee7
-    style F fill:#e1bee7
-    style J fill:#c8e6c9
 ```
 
 **Gambar 4.4**: Urutan eksplorasi DFS (Depth First): 1, 2 (turun), 3 (naik-turun), 4 (Goal).
@@ -310,9 +290,6 @@ graph TD
     B --4--> E((E))
     C --2--> F((F))
     D --1--> G((G))
-
-    style A fill:#e3f2fd
-    style G fill:#c8e6c9
 
     linkStyle 0 stroke:#2196f3,stroke-width:2px;
     linkStyle 3 stroke:#2196f3,stroke-width:2px;
@@ -493,11 +470,6 @@ graph TD
 
     F --> Goal((GOAL<br/>h=0))
 
-    style A fill:#fff9c4
-    style C fill:#e1bee7
-    style F fill:#e1bee7
-    style Goal fill:#c8e6c9
-
     linkStyle 1 stroke:#9c27b0,stroke-width:2px;
     linkStyle 4 stroke:#9c27b0,stroke-width:2px;
     linkStyle 6 stroke:#9c27b0,stroke-width:2px;
@@ -534,10 +506,6 @@ graph LR
 
     Start((Start)) -->|g_n| Node((Current Node))
     Node -.->|h_n| Goal((Goal))
-
-    style F fill:#fff9c4,stroke:#fbc02d,stroke-width:2px
-    style G fill:#bbdefb
-    style H fill:#e1bee7
 ```
 
 **Gambar 4.9**: Konsep A\* Search. Total cost f(n) adalah jumlah dari cost yang sudah ditempuh g(n) dan estimasi sisa jarak h(n).
@@ -594,9 +562,6 @@ graph LR
     linkStyle 2 stroke:#2196f3,stroke-width:2px;
     linkStyle 6 stroke:#2196f3,stroke-width:2px;
     linkStyle 7 stroke:#2196f3,stroke-width:2px;
-
-    style A fill:#e3f2fd
-    style G fill:#c8e6c9
 ```
 
 **Gambar 4.10**: Contoh graf untuk penelusuran A\*. Angka pada garis adalah cost sebenarnya, angka di node adalah heuristic (h).
@@ -781,12 +746,6 @@ flowchart TD
     Mut --> Replace[6. REPLACEMENT<br/>Generasi Baru]
     Replace -->|Belum Konvergen| Eval
     Replace -->|Konvergen| Finish((Selesai))
-
-    style Init fill:#e3f2fd
-    style Eval fill:#fff9c4
-    style Cross fill:#f8bbd0
-    style Mut fill:#e1bee7
-    style Select fill:#c8e6c9
 ```
 
 **Gambar 4.12**: Siklus Genetic Algorithm (GA). Proses evolusi berulang dari evaluasi hingga penggantian populasi.

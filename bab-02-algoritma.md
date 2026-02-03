@@ -266,27 +266,20 @@ George Pólya, matematikawan Hungaria, merumuskan empat langkah pemecahan masala
 
 ```mermaid
 flowchart TD
-    subgraph Polya[Langkah Pemecahan Masalah George Polya]
+    subgraph Polya["🔄 Langkah Pemecahan Masalah George Polya"]
         direction TB
-        Step1[1. UNDERSTAND<br/>Pahami Masalah] -->|Analisis| Step2[2. PLAN<br/>Rencanakan Solusi]
-        Step2 -->|Desain| Step3[3. EXECUTE<br/>Jalankan Rencana]
-        Step3 -->|Verifikasi| Step4{4. REVIEW<br/>Tinjau Ulang}
+        Step1["1️⃣ UNDERSTAND<br/>Pahami Masalah"] -->|Analisis| Step2["2️⃣ PLAN<br/>Rencanakan Solusi"]
+        Step2 -->|Desain| Step3["3️⃣ EXECUTE<br/>Jalankan Rencana"]
+        Step3 -->|Verifikasi| Step4{"4️⃣ REVIEW<br/>Tinjau Ulang"}
 
-        Step4 -->|Solusi Benar| Finish((Selesai))
-        Step4 -->|Masih Salah/Kurang| Step2
+        Step4 -->|Solusi Benar| Finish(("✅ Selesai"))
+        Step4 -->|Masih Salah| Step2
 
-        Step1 -.-> D1[? Ditanya<br/>? Diketahui<br/>? Batasan]
-        Step2 -.-> D2[? Strategi<br/>? Pola<br/>? Sub-masalah]
-        Step3 -.-> D3[? Implementasi<br/>? Cek Langkah]
-        Step4 -.-> D4[? Validasi<br/>? Optimasi]
+        Step1 -.-> D1["❓ Ditanya<br/>❓ Diketahui<br/>❓ Batasan"]
+        Step2 -.-> D2["📋 Strategi<br/>🔍 Pola<br/>🧩 Sub-masalah"]
+        Step3 -.-> D3["⚙️ Implementasi<br/>✔️ Cek Langkah"]
+        Step4 -.-> D4["🎯 Validasi<br/>⚡ Optimasi"]
     end
-
-    style Polya fill:#f9f9f9,stroke:#333,stroke-width:2px
-    style Step1 fill:#e1f5fe,stroke:#01579b
-    style Step2 fill:#e8f5e9,stroke:#2e7d32
-    style Step3 fill:#fff3e0,stroke:#ef6c00
-    style Step4 fill:#fce4ec,stroke:#880e4f
-    style Finish fill:#333,stroke:#fff,color:#fff
 ```
 
 **Gambar 2.4**: Diagram alur langkah pemecahan masalah menurut George Polya (Understand, Plan, Execute, Review).
@@ -417,9 +410,6 @@ graph TD
     Sol2 -->|Gabung| Final
     Sol3 -->|Gabung| Final
     end
-
-    style Problem fill:#FFE0B2,stroke:#E65100
-    style Final fill:#C8E6C9,stroke:#2E7D32
 ```
 
 **Gambar 2.7**: Skema strategi Divide and Conquer: memecah masalah, menyelesaikan, lalu menggabungkan solusi.
@@ -491,8 +481,6 @@ graph TD
     C3 & C4 --> M2[9, 10, 82]
 
     M1 & M2 --> Final[3, 9, 10, 27, 38, 43, 82]
-
-    style Final fill:#FFEB3B,stroke:#FBC02D
 ```
 
 **Gambar 2.8**: Visualisasi langkah demi langkah algoritma Merge Sort memecah dan mengurutkan array.
@@ -563,9 +551,6 @@ graph TD
     Step3 -->|Tuang 4L ke 3L| Step4[Langkah 4<br/>(4L: 0, 3L: 1)]
     Step4 -->|Isi 4L| Step5[Langkah 5<br/>(4L: 4, 3L: 1)]
     Step5 -->|Tuang ke 3L| Step6[Langkah 6: GOAL<br/>(4L: 2, 3L: 3)]
-
-    style Step0 fill:#f5f5f5
-    style Step6 fill:#c8e6c9,stroke:#2e7d32,stroke-width:2px
 ```
 
 **Gambar 2.9**: Visualisasi langkah penyelesaian Water Jug Problem (mendapatkan 2 liter dari kendi 4L dan 3L).

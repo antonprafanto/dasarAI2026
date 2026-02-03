@@ -37,13 +37,11 @@ graph TD
     subgraph SVC [KLASIFIKASI (Supervised)]
         D1[Data + Label] --> M1[Model Training]
         M1 --> P1[Prediksi Kelas]
-        style SVC fill:#e3f2fd
     end
 
     subgraph CLS [CLUSTERING (Unsupervised)]
         D2[Data Tanpa Label] --> A1[Algoritma Clustering]
         A1 --> G1[Kelompok/Cluster]
-        style CLS fill:#fff9c4
     end
 
     D1:::input
@@ -134,10 +132,6 @@ graph LR
     Step1 --> Step2 --> Step3 --> C{Konvergen?}
     C -->|Belum| Step2
     C -->|Ya| Fin[Selesai]
-
-    style R fill:#ffccbc
-    style B fill:#bbdefb
-    style U fill:#c8e6c9
 ```
 
 **Gambar 7.2**: Siklus algoritma K-Means. Centroid terus bergeser sampai posisinya stabil (konvergen) di tengah-tengah cluster.
@@ -286,11 +280,6 @@ graph TD
 
     DE --- D
     DE --- E
-
-    style ABCDEF fill:#e1bee7
-    style AB fill:#bbdefb
-    style CDE fill:#bbdefb
-    style F fill:#ffccbc
 ```
 
 _(Contoh Dendrogram: Jika dipotong di tengah, kita dapat 3 cluster: {A,B}, {C,D,E}, dan {F})._
@@ -407,13 +396,11 @@ graph TD
     subgraph Cluster1 [Cluster 1]
         A1(( )) --- A2(( )) --- A3(( ))
         A2 --- A4(( ))
-        style Cluster1 fill:#c8e6c9
     end
 
     subgraph Cluster2 [Cluster 2]
         B1(( )) --- B2(( ))
         B2 --- B3(( )) --- B4(( ))
-        style Cluster2 fill:#bbdefb
     end
 
     subgraph Outliers [Noise]

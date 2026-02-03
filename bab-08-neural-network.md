@@ -82,10 +82,6 @@ graph LR
 
     Sum -->|z| Act
     Act -->|activation| Output
-
-    style Inputs fill:#fff9c4
-    style Processing fill:#bbdefb
-    style Output fill:#c8e6c9
 ```
 
 **Gambar 8.2**: Struktur Perceptron. Sinyal input dikalikan bobot (weights), dijumlahkan (sum), ditambah bias, dan masuk ke fungsi aktivasi.
@@ -153,9 +149,6 @@ graph TD
         X4[1,1 -> 0]:::zero
         Gap2[NOT Linearly Separable]:::hidden
     end
-
-    style AND_Gate fill:#e8f5e9
-    style XOR_Gate fill:#ffebee
 
     classDef zero fill:#ffcdd2,stroke:#c62828
     classDef one fill:#c8e6c9,stroke:#2e7d32
@@ -409,9 +402,6 @@ graph LR
     end
 
     Forward_Pass --> Backward_Pass
-
-    style Forward_Pass fill:#e3f2fd
-    style Backward_Pass fill:#fff3e0
 ```
 
 **Gambar 8.8**: Alur Backpropagation. Forward pass menghitung prediksi dan loss, Backward pass mengalirkan error balik (chain rule) untuk menghitung gradient.
@@ -457,9 +447,6 @@ graph TD
     subgraph SGD_M [Dengan Momentum (Smooth)]
         S2((Start)) --> M1 --> M2 --> G2((Minima))
     end
-
-    style SGD fill:#ffebee
-    style SGD_M fill:#e8f5e9
 ```
 
 **Gambar 8.9**: Ilustrasi Momentum. Tanpa momentum (kiri), update berosilasi lambat. Dengan momentum (kanan), update lebih cepat dan terarah menuju minima.
@@ -559,9 +546,6 @@ graph TD
         TI1 --- TH2
         TI2 --- TH1
     end
-
-    style Training fill:#fff9c4
-    style Testing fill:#e1bee7
 ```
 
 **Gambar 8.10**: Dropout Regularization. Saat training, sebagian neuron dimatikan secara random (X) untuk mencegah co-adaptation. Saat testing, semua neuron aktif.

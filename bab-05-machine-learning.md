@@ -49,9 +49,6 @@ graph LR
     subgraph ML [Machine Learning]
         D2[Data] & O2[Output] --> T2[Training] --> R2[Rules/Model]
     end
-
-    style Traditional fill:#e3f2fd,stroke:#2196f3
-    style ML fill:#fff3e0,stroke:#ff9800
 ```
 
 **Gambar 5.1**: Perbedaan mendasar alur kerja Pemrograman Tradisional vs Machine Learning. ML mempelajari aturan dari data dan output yang diinginkan.
@@ -137,9 +134,6 @@ graph TD
 
     Agent -->|Action| Env
     Env -->|State + Reward| Agent
-
-    style Agent fill:#c8e6c9,stroke:#2e7d32
-    style Env fill:#bbdefb,stroke:#1565c0
 ```
 
 **Gambar 5.3**: Siklus perulangan dalam Reinforcement Learning. Agent belajar dari umpan balik (reward/punishment) lingkungan.
@@ -171,12 +165,6 @@ graph TD
     TrainSet -->|Melatih Parameter| Model
     ValSet -->|Tuning Hyperparameter| Model
     TestSet -->|Evaluasi Final| Perf[Performa Final]
-
-    style Total fill:#cfd8dc
-    style TrainSet fill:#bbdefb
-    style ValSet fill:#fff9c4
-    style TestSet fill:#ffccbc
-    style Model fill:#e1bee7
 ```
 
 **Gambar 5.4**: Pembagian Dataset standar menjadi tiga bagian: Training, Validation, dan Testing.
@@ -414,19 +402,16 @@ graph LR
     subgraph UF [Underfitting]
     direction TB
     G1[Garis Lurus] --> D1[Data Melengkung]
-    style UF fill:#ffccbc
     end
 
     subgraph JR [Just Right]
     direction TB
     G2[Garis Lengkung Halus] --> D2[Data Melengkung]
-    style JR fill:#c8e6c9
     end
 
     subgraph OF [Overfitting]
     direction TB
     G3[Garis Zigzag Rumit] --> D3[Data Melengkung]
-    style OF fill:#ffccbc
     end
 
     UF --> JR --> OF

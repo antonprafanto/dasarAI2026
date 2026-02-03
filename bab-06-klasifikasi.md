@@ -50,11 +50,6 @@ graph LR
     Input --> Model --> Output
     Output -->|Yes| R1[Flu]
     Output -->|No| R2[Sehat]
-
-    style Input fill:#e3f2fd
-    style Output fill:#fff9c4
-    style R1 fill:#ffccbc
-    style R2 fill:#c8e6c9
 ```
 
 **Gambar 6.1**: Alur dasar proses klasifikasi. Fitur input diproses untuk memprediksi label kategori (kelas).
@@ -481,9 +476,6 @@ graph TD
 
     P1 & P2 & P3 & P4 & P5 --> Voting{VOTING}
     Voting --> Result[Prediksi Akhir: A]
-
-    style Forest fill:#e8f5e9
-    style Voting fill:#fff9c4
 ```
 
 **Gambar 6.7**: Arsitektur Random Forest. Menggabungkan prediksi dari banyak pohon (ensemble) melalui voting.
@@ -632,9 +624,6 @@ graph TD
 
     Healthy -->|FP=5| P_Sick
     Healthy -->|TN=45| P_Health
-
-    style Sick fill:#ffcdd2
-    style Healthy fill:#c8e6c9
 
     style P_Sick stroke:#d32f2f
     style P_Health stroke:#388e3c

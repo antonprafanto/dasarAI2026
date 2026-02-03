@@ -51,7 +51,6 @@ block-beta
     Res["Final Score = Mean(Scores) ± Std(Scores)"]:6
 
     classDef val fill:#ffcc80,stroke:#e65100
-    style Res fill:#e1bee7
 ```
 
 **Gambar 9.1**: Ilustrasi 5-Fold Cross Validation. Data dibagi menjadi 5 bagian. Model dilatih 5 kali, setiap kali menggunakan satu bagian berbeda sebagai validasi (orange).
@@ -206,13 +205,7 @@ graph TD
         direction LR
         R1(●) ~~~ R2(●) ~~~ R3(●)
         R4(●) ~~~ R5(●) ~~~ R6(●)
-
-        style R1 fill:#ffcdd2
-        style R6 fill:#c8e6c9
     end
-
-    style Grid_Search fill:#e3f2fd
-    style Random_Search fill:#f3e5f5
 ````
 
 **Gambar 9.3**: Perbedaan Grid Search vs Random Search. Grid Search membuang resources pada parameter yang tidak penting (sumbu vertikal misal), sedangkan Random Search mengeksplorasi nilai unique lebih banyak.
@@ -363,10 +356,6 @@ graph TD
     S3 --> M3
 
     M1 & M2 & M3 --> Agg
-
-    style Bootstrap_Samples fill:#fff3e0
-    style Models fill:#e3f2fd
-    style Agg fill:#dcedc8
 ```
 
 **Gambar 9.6**: Bagging (Bootstrap Aggregating). Sampel data diambil secara acak (bootstrap), model dilatih secara paralel, dan hasilnya digabungkan.
@@ -392,10 +381,6 @@ graph TD
     W2 --> M3[Model 3]
 
     M1 & M2 & M3 --> Final[Weighted Combination]
-
-    style W1 fill:#ffcdd2
-    style W2 fill:#ffcdd2
-    style Final fill:#c8e6c9
 ```
 
 **Gambar 9.7**: Boosting. Model dilatih secara berurutan (sequential). Model baru fokus memperbaiki kesalahan dari model sebelumnya.
@@ -457,9 +442,6 @@ graph TD
 
     P1 & P2 & P3 --> Meta
     Meta --> Final
-
-    style Level_0 fill:#e1bee7
-    style Level_1 fill:#bbdefb
 ````
 
 **Gambar 9.8**: Stacking. Prediksi dari model-model dasar (Level 0) menjadi fitur input untuk model meta-learner (Level 1).

@@ -38,11 +38,6 @@ graph TD
     World[DUNIA NYATA<br/>(Kompleks, Ambigu)] -->|Abstraksi| Rep[REPRESENTASI<br/>(Terstruktur, Formal)]
     Rep -->|Reasoning| Reason[PENALARAN<br/>(Logika/Inferensi)]
     Reason -->|Action| Decision[KEPUTUSAN / AKSI]
-
-    style World fill:#ffcdd2,stroke:#d32f2f,stroke-width:2px
-    style Rep fill:#bbdefb,stroke:#1976d2,stroke-width:2px
-    style Reason fill:#c8e6c9,stroke:#388e3c,stroke-width:2px
-    style Decision fill:#fff9c4,stroke:#fbc02d,stroke-width:2px
 ```
 
 **Gambar 3.1**: Rantai proses pengetahuan dalam AI: dari dunia nyata ke keputusan.
@@ -215,13 +210,6 @@ graph TD
 
     Penguin -.->|CAN'T| Fly
     Penguin -.->|CAN| Swim[Berenang]
-
-    style Animal fill:#f5f5f5,stroke:#333
-    style Bird fill:#e3f2fd,stroke:#2196f3
-    style Eagle fill:#fff3e0,stroke:#ff9800
-    style Penguin fill:#e0f2f1,stroke:#009688
-    style Dove fill:#f3e5f5,stroke:#9c27b0
-    style Garuda fill:#fff9c4,stroke:#fbc02d
 ```
 
 **Gambar 3.2**: Contoh Semantic Network yang menunjukkan hierarki hewan dan propertinya.
@@ -417,14 +405,6 @@ graph LR
     Jawa_Tengah -->|bagianDari| Indonesia[Indonesia]
 
     Indonesia -->|instanceOf| Negara[Negara]
-
-    style Joko_Widodo fill:#bbdefb
-    style Surakarta fill:#c8e6c9
-    style Jawa_Tengah fill:#c8e6c9
-    style Indonesia fill:#c8e6c9
-    style Presiden fill:#ffe0b2
-    style Kepala_Negara fill:#ffe0b2
-    style Negara fill:#ffcc80
 ```
 
 **Gambar 3.5**: Visualisasi graf pengetahuan (Knowledge Graph) sederhana tentang entitas Joko Widodo.
@@ -477,10 +457,6 @@ graph TD
     Engine --> Output[OUTPUT / Solusi]
 
     Rules -.-> Facts
-
-    style KB fill:#e3f2fd,stroke:#1565c0
-    style Engine fill:#fff3e0,stroke:#e65100
-    style Output fill:#e8f5e9,stroke:#2e7d32
 ```
 
 **Gambar 3.6**: Arsitektur Sistem Berbasis Aturan (Rule-Based System).
@@ -542,12 +518,6 @@ flowchart TD
     User((PENGGUNA / User)) <-->|Tanya Jawab| IE
 
     IE <--> Explain[EXPLANATION FACILITY<br/>Penjelasan 'Why' & 'How']
-
-    style Human fill:#f8bbd0,stroke:#c2185b
-    style User fill:#bbdefb,stroke:#0d47a1
-    style KB fill:#fff9c4,stroke:#fbc02d
-    style IE fill:#e1bee7,stroke:#7b1fa2
-    style Explain fill:#dcedc8,stroke:#558b2f
 ```
 
 **Gambar 3.7**: Arsitektur lengkap dari sebuah Expert System.
@@ -631,9 +601,6 @@ graph TD
     Wet --> Accident[Kecelakaan]
     Vis --> Accident
     Speed[Jarak Pandang] --> Accident
-
-    style Rain fill:#e1f5fe
-    style Accident fill:#ffcdd2
 ```
 
 **Gambar 3.8**: Contoh struktur Bayesian Network sederhana untuk prediksi kecelakaan.

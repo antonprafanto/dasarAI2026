@@ -43,8 +43,6 @@ graph TD
         D4[4. Algorithmic Bias<br>Model amplification]
         D5[5. Deployment Bias<br>Context mismatch]
     end
-
-    style Sources_of_Bias fill:#ffebee,stroke:#c62828
     D1 & D2 & D3 & D4 & D5 :::bias
     classDef bias fill:#ffcdd2,stroke:#e57373
 ```
@@ -69,11 +67,6 @@ graph TD
     ModelBias -->|Deployment| Action[Discriminatory Action]
     Action -->|Feedback| NewData[New Biased Data]
     NewData -->|Cycle| HistBias
-
-    style HistBias fill:#ffecb3
-    style ModelBias fill:#ffcc80
-    style Action fill:#ffab91
-    style NewData fill:#e1bee7
 ```
 
 **Gambar 10.2**: Bias Feedback Loop. Data bias menghasilkan model bias, keputusan model menciptakan realita baru yang bias, yang kembali menjadi data training.
@@ -143,14 +136,11 @@ Equal Opportunity:     TPR sama untuk semua grup
 graph LR
     subgraph Black_Box
         Input1[Input] --> Model1[?] --> Output1[Output]
-        style Model1 fill:#212121,color:#fff
     end
 
     subgraph Explainable
         Input2[Input] --> Model2[Rules / Weights] --> Output2[Output]
         Model2 -.-> Exp[Explanation:<br>Because Feature X...]
-        style Model2 fill:#e3f2fd
-        style Exp fill:#fff9c4,stroke-dasharray: 5 5
     end
 ```
 
@@ -384,10 +374,6 @@ graph LR
     Img1[Pandas<br>99% Conf] -- + Noise --> Img2[Pandas + Noise]
     Img2 --> Model[AI Model]
     Model --> Res[Gibbon<br>99% Conf]
-
-    style Img1 fill:#fff
-    style Img2 fill:#e0e0e0
-    style Res fill:#ffcdd2
 ```
 
 **Gambar 10.9**: Adversarial Example. Penambahan noise yang tidak kasat mata bagi manusia bisa membuat AI salah mengenali gambar dengan percaya diri tinggi.
