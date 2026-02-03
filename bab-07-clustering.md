@@ -34,20 +34,20 @@ Ini adalah masalah **clustering** — menemukan kelompok alami dalam data **tanp
 
 ```mermaid
 graph TD
-    subgraph SVC [KLASIFIKASI (Supervised)]
+    subgraph SVC ["KLASIFIKASI - Supervised"]
         D1[Data + Label] --> M1[Model Training]
         M1 --> P1[Prediksi Kelas]
     end
 
-    subgraph CLS [CLUSTERING (Unsupervised)]
+    subgraph CLS ["CLUSTERING - Unsupervised"]
         D2[Data Tanpa Label] --> A1[Algoritma Clustering]
         A1 --> G1[Kelompok/Cluster]
     end
 
-    D1:::input
-    D2:::input
-    P1:::output
-    G1:::output
+    D1
+    D2
+    P1
+    G1
 ```
 
 **Gambar 7.1**: Perbedaan mendasar: Klasifikasi belajar dari data berlabel (guru), Clustering mencari pola sendiri dari data tanpa label (otodidak).
@@ -252,12 +252,12 @@ FUNGSI AgglomerativeClustering(data):
 
 Bagaimana mengukur jarak antar cluster?
 
-| Linkage      | Formula                             | Karakteristik                     |
-| ------------ | ----------------------------------- | --------------------------------- | --- | --- | -------------------- | -------------------- |
-| **Single**   | $\min\{d(a,b) : a \in A, b \in B\}$ | Sensitif outlier, bisa "chaining" |
-| **Complete** | $\max\{d(a,b) : a \in A, b \in B\}$ | Cluster compact, sensitif outlier |
-| **Average**  | $\frac{1}{                          | A                                 |     | B   | }\sum\_{a,b} d(a,b)$ | Balance, paling umum |
-| **Ward**     | Penambahan variance minimal         | Cluster equal-sized               |
+| Linkage      | Formula                     | Karakteristik                     |
+| ------------ | --------------------------- | --------------------------------- |
+| **Single**   | min d(a,b) untuk a∈A, b∈B   | Sensitif outlier, bisa chaining   |
+| **Complete** | max d(a,b) untuk a∈A, b∈B   | Cluster compact, sensitif outlier |
+| **Average**  | rata-rata d(a,b)            | Balance, paling umum              |
+| **Ward**     | Penambahan variance minimal | Cluster equal-sized               |
 
 ### 7.3.4 Dendrogram
 
@@ -323,7 +323,7 @@ Potong dendrogram secara horizontal pada level tertentu:
 ```mermaid
 graph TD
     subgraph Core [Core Point]
-        C((Core)):::core
+        C((Core))
         N1( ) --- C
         N2( ) --- C
         N3( ) --- C
@@ -331,13 +331,13 @@ graph TD
     end
 
     subgraph Border [Border Point]
-        B((Border)):::border
-        C_Ref((Core)):::core
+        B((Border))
+        C_Ref((Core))
         B --- C_Ref
     end
 
     subgraph Noise [Noise/Outlier]
-        X((Noise)):::noise
+        X((Noise))
     end
 ```
 
@@ -397,8 +397,8 @@ graph TD
     end
 
     subgraph Outliers [Noise]
-        N1[X]:::noise
-        N2[X]:::noise
+        N1[X]
+        N2[X]
     end
 ```
 
