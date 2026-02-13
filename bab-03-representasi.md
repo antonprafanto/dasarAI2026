@@ -119,19 +119,21 @@ graph TD
 
 **Frame** (Marvin Minsky, 1975) adalah struktur data untuk merepresentasikan objek stereotip, terdiri dari: **nama frame**, **slots** (atribut), **fillers** (nilai), **default values**, dan **facets** (batasan).
 
-```
-┌──────────────────────────────────────────┐
-│  FRAME: Mahasiswa  (IS-A: Manusia)       │
-├──────────────────────────────────────────┤
-│  nama        : String                    │
-│  nim         : String                    │
-│  jurusan     : String                    │
-│  semester    : Integer                   │
-│  ipk         : Float                     │
-│  status      : "aktif" (default)         │
-│  dosen_wali  : → Dosen                   │
-│  Methods: daftar_matkul(), hitung_ipk()  │
-└──────────────────────────────────────────┘
+```mermaid
+classDiagram
+    class Mahasiswa {
+        +String nama
+        +String nim
+        +String jurusan
+        +Integer semester
+        +Float ipk
+        +String status = "aktif"
+        +Dosen dosen_wali
+        +daftar_matkul()
+        +hitung_ipk()
+    }
+    class Manusia
+    Mahasiswa --|> Manusia : IS-A
 ```
 
 **Gambar 3.3**: Struktur Frame untuk konsep 'Mahasiswa'.
