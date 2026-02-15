@@ -18,7 +18,7 @@ Setelah mempelajari bab ini, Anda akan mampu:
 
 Bayangkan Anda mengajar anak tentang hewan — Anda tidak hanya mengatakan "kucing adalah hewan," tetapi juga "kucing memiliki empat kaki," "kucing bisa mengeong," dan "kucing adalah mamalia." Anda membangun jaringan pengetahuan yang saling terhubung. Dalam AI, kita menghadapi tantangan serupa: **Bagaimana merepresentasikan pengetahuan dunia nyata dalam format yang dapat diproses komputer?**
 
-Representasi pengetahuan (_knowledge representation_) adalah fondasi banyak sistem AI, terutama dalam AI simbolik. Bab ini membahas berbagai cara untuk "mengajarkan" pengetahuan kepada mesin.
+Representasi pengetahuan (_knowledge representation_) adalah fondasi banyak sistem AI, terutama dalam AI simbolik (Russell & Norvig, 2020). Bab ini membahas berbagai cara untuk "mengajarkan" pengetahuan kepada mesin.
 
 ---
 
@@ -39,7 +39,7 @@ Representasi yang baik harus memenuhi: **Kecukupan** (mampu merepresentasikan se
 
 ## 3.2 Logika Proposisional
 
-**Logika proposisional** berurusan dengan proposisi yang bernilai benar (T) atau salah (F). Contoh: P = "Hari ini hujan", Q = "Jalanan basah".
+**Logika proposisional** berurusan dengan proposisi yang bernilai benar (T) atau salah (F) (Russell & Norvig, 2020, Ch. 7). Contoh: P = "Hari ini hujan", Q = "Jalanan basah".
 
 **Operator Logika:**
 
@@ -68,7 +68,7 @@ Representasi yang baik harus memenuhi: **Kecukupan** (mampu merepresentasikan se
 
 ## 3.3 Logika Predikat (First-Order Logic)
 
-**Logika predikat** memperluas logika proposisional dengan menambahkan **predikat** (contoh: `Manusia(x)`), **variabel** (x, y), **konstanta** (`Socrates`), dan **quantifier** ($\forall$ = untuk semua, $\exists$ = ada setidaknya satu).
+**Logika predikat** memperluas logika proposisional dengan menambahkan **predikat** (contoh: `Manusia(x)`), **variabel** (x, y), **konstanta** (`Socrates`), dan **quantifier** ($\forall$ = untuk semua, $\exists$ = ada setidaknya satu) (Russell & Norvig, 2020, Ch. 8-9).
 
 **Contoh Representasi:**
 
@@ -117,7 +117,7 @@ graph TD
 
 ### Frame
 
-**Frame** (Marvin Minsky, 1975) adalah struktur data untuk merepresentasikan objek stereotip, terdiri dari: **nama frame**, **slots** (atribut), **fillers** (nilai), **default values**, dan **facets** (batasan).
+**Frame** (Minsky, 1975) adalah struktur data untuk merepresentasikan objek stereotip, terdiri dari: **nama frame**, **slots** (atribut), **fillers** (nilai), **default values**, dan **facets** (batasan).
 
 ```
 ┌──────────────────────────────────────────┐
@@ -140,7 +140,7 @@ Keuntungan: modular, mendukung inheritance, menangani ketidaklengkapan informasi
 
 ### Script
 
-**Script** (Roger Schank & Robert Abelson) adalah frame khusus untuk urutan kejadian stereotip. Komponen: **entry conditions**, **roles**, **props**, **scenes**, dan **results**.
+**Script** (Schank & Abelson, 1977) adalah frame khusus untuk urutan kejadian stereotip. Komponen: **entry conditions**, **roles**, **props**, **scenes**, dan **results**.
 
 **Contoh Script "Makan di Restoran"**: Masuk → Disambut pelayan → Diberi menu → Pesan makanan → Koki masak → Makan → Minta bon → Bayar → Keluar.
 
@@ -150,7 +150,7 @@ Script membantu AI **memahami cerita**, **memprediksi** kejadian, dan **menjawab
 
 ## 3.6 Ontology dan Knowledge Graphs
 
-**Ontology** adalah spesifikasi formal dari konseptualisasi bersama — mendefinisikan kosakata domain, hubungan antar konsep, serta batasan dan aturan. Komponen: **Classes**, **Instances**, **Properties**, **Axioms**.
+**Ontology** adalah spesifikasi formal dari konseptualisasi bersama — mendefinisikan kosakata domain, hubungan antar konsep, serta batasan dan aturan (Russell & Norvig, 2020, Ch. 12). Komponen: **Classes**, **Instances**, **Properties**, **Axioms**.
 
 **Knowledge Graph** adalah implementasi praktis berupa graf yang menyimpan fakta dalam format triple: **(Subject, Predicate, Object)**.
 
@@ -209,7 +209,7 @@ flowchart LR
 
 ## 3.8 Bayesian Networks
 
-Dunia nyata penuh ketidakpastian. **Teorema Bayes** adalah fondasi penalaran probabilistik:
+Dunia nyata penuh ketidakpastian. **Teorema Bayes** adalah fondasi penalaran probabilistik (Pearl, 1988):
 
 $$P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}$$
 
@@ -235,7 +235,7 @@ graph TD
 
 ## 3.9 Fuzzy Logic
 
-**Fuzzy Logic** menangani kebenaran parsial — nilai antara 0 dan 1 (bukan hanya 0 atau 1).
+**Fuzzy Logic** (Zadeh, 1965) menangani kebenaran parsial — nilai antara 0 dan 1 (bukan hanya 0 atau 1).
 
 - Logika Klasik: "Apakah air panas?" → Ya/Tidak
 - Fuzzy: "Seberapa panas?" → 0.7 panas
@@ -270,7 +270,7 @@ JIKA suhu DINGIN MAKA ac MATI
 
 ## 📚 Studi Kasus: MYCIN
 
-MYCIN (Stanford, 1970-an) mendiagnosis infeksi bakteri dan merekomendasikan antibiotik menggunakan ~600 aturan IF-THEN dengan **Certainty Factor** (CF: -1 hingga 1). Contoh aturan: "JIKA infeksi meningitis DAN organisme gram-positif DAN morfologi coccus MAKA kemungkinan 0.7 Streptococcus." Dalam evaluasi, MYCIN akurat 65% — setara atau lebih baik dari banyak dokter spesialis.
+MYCIN (Shortliffe, 1976) mendiagnosis infeksi bakteri dan merekomendasikan antibiotik menggunakan ~600 aturan IF-THEN dengan **Certainty Factor** (CF: -1 hingga 1). Contoh aturan: "JIKA infeksi meningitis DAN organisme gram-positif DAN morfologi coccus MAKA kemungkinan 0.7 Streptococcus." Dalam evaluasi, MYCIN akurat 65% — setara atau lebih baik dari banyak dokter spesialis.
 
 ---
 
@@ -348,12 +348,14 @@ MYCIN (Stanford, 1970-an) mendiagnosis infeksi bakteri dan merekomendasikan anti
 
 ---
 
-## 📚 Bacaan Lebih Lanjut
+## 📚 Referensi
 
-1. Russell, S., & Norvig, P. (2020). _Artificial Intelligence: A Modern Approach_ (4th ed.). Chapter 8-14.
-2. Minsky, M. (1975). A Framework for Representing Knowledge. MIT AI Laboratory.
-3. Schank, R. C., & Abelson, R. P. (1977). _Scripts, Plans, Goals and Understanding_.
-4. Pearl, J. (1988). _Probabilistic Reasoning in Intelligent Systems_.
+1. Russell, S., & Norvig, P. (2020). _Artificial Intelligence: A Modern Approach_ (4th ed.). Pearson. Chapter 7-14.
+2. Minsky, M. (1975). A Framework for Representing Knowledge. _MIT AI Laboratory Memo_ No. 306.
+3. Schank, R. C., & Abelson, R. P. (1977). _Scripts, Plans, Goals and Understanding: An Inquiry into Human Knowledge Structures_. Lawrence Erlbaum Associates.
+4. Pearl, J. (1988). _Probabilistic Reasoning in Intelligent Systems: Networks of Plausible Inference_. Morgan Kaufmann.
+5. Zadeh, L. A. (1965). Fuzzy Sets. _Information and Control_, 8(3), 338–353.
+6. Shortliffe, E. H. (1976). _Computer-Based Medical Consultations: MYCIN_. Elsevier.
 
 ---
 
